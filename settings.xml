@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Stage" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
