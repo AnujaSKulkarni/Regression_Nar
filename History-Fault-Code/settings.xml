@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="baa42e32-2eb6-4e8b-808b-358c5269a28d" wadlVersion="http://wadl.dev.java.net/2009/02" name="History-Fault Code" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="baa42e32-2eb6-4e8b-808b-358c5269a28dfileName">History-Fault-Code</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

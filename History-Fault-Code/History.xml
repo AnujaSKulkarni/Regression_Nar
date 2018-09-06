@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="History" path="/api/v1/history" id="5070d980-b287-417d-935a-0ae1ddee013e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5070d980-b287-417d-935a-0ae1ddee013efileName">History</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="History-Fault Code" id="7ab7c494-94ad-4a8c-881b-23d5df1fb568" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>application/json</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value>bearer ${access_token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer ${access_token}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="History-Fault Code" id="0bd62b80-7381-4970-ac83-ddb4cc02e038" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://{{API-Connect}}</con:endpoint>
+      <con:request>{
+
+  "applianceId":"WPR333334UCD3",
+
+  "groupBy": "System_FaultCode",
+
+  "attributeNames":"System_FaultCode",
+
+  "startTime":"1533580200000",
+
+  "endTime":"1533666599000",
+
+  "maxRows":"5"
+
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
