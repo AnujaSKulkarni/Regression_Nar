@@ -4,6 +4,144 @@
     <con:setting id="233d5e49-df11-49b2-8e5c-c99e972dcca8fileName">History-Fault-Code</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="groovy" name="DataSource_Setup" id="5495b117-88f6-4488-8f81-ff2a8e2181e1">
+    <con:settings/>
+    <con:config>
+      <script>import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.lang.String
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+def TestStep_Count = testRunner.testCase.getTestStepCount()
+def DataSource_Flag
+def RunTimeDataSource_Flag
+log.info TestStep_Count
+def TestStep_Name
+//******************Finding DataSource***************
+for(i = 0;i &lt; TestStep_Count;i++){
+	TestStep_Name = testRunner.testCase.getTestStepAt(i).name
+	log.info TestStep_Name
+	if(TestStep_Name == "DataSource"){
+		log.info("Data Source present")
+		DataSource_Flag = true
+		break
+	}else{
+		DataSource_Flag = false
+	}
+}
+
+for(i = 0; i &lt; TestStep_Count; i++){
+	TestStep_Name = testRunner.testCase.getTestStepAt(i).name
+	if(TestStep_Name == "DataSource_RunTime"){
+		log.info("RunTime Data Source present")
+		RunTimeDataSource_Flag = true
+		break
+	}
+	else{
+		RunTimeDataSource_Flag = false
+		log.info("RunTime Data Source not present")
+	}
+}
+log.info "Data Source: " + DataSource_Flag
+log.info "Run Time Data Source: " + RunTimeDataSource_Flag
+
+
+//******************Deleting Properties from DataSource****************
+if(DataSource_Flag == true){
+	log.info "Deleting DataSource Properties"
+	def TestStep = testRunner.testCase.getTestStepByName("DataSource")
+	def Property_Count = TestStep.propertyCount
+	log.info Property_Count
+	def Property_Name
+	for(i = Property_Count - 1; i >= 0; i--)
+	{
+		Property_Name = TestStep.getPropertyAt(i).name
+		log.info "Deleting: " + Property_Name
+		TestStep.removeProperty(Property_Name)
+	}
+}else{
+	log.info("Data Source not present")
+}
+
+//******************Deleting Properties from Run Time DataSource****************
+if(RunTimeDataSource_Flag == true){
+	log.info "Deleting RunTime DataSource Properties"
+	def TestStep = testRunner.testCase.getTestStepByName("DataSource_RunTime")
+	def Property_Count = TestStep.propertyCount
+	log.info Property_Count
+	def Property_Name
+	for(i = Property_Count - 1; i >= 0; i--)
+	{
+		Property_Name = TestStep.getPropertyAt(i).name
+		log.info "Deleting: " + Property_Name
+		TestStep.removeProperty(Property_Name)
+	}
+}else{
+	log.info("RunTime Data Source not present")
+}
+
+//*********Reading Excel and adding Property to DataSource*****************
+
+if(DataSource_Flag == true){
+	def Test_Data_Path = context.expand( '${#Project#Test_Data_Path}' )
+	InputStream ExcelFileToRead = new FileInputStream(Test_Data_Path);
+	XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
+	XSSFSheet sheet = wb.getSheet("Data")
+	XSSFRow row; 
+	XSSFCell cell;
+	
+	row = sheet.getRow(0)
+	def Col_count = row.getLastCellNum()
+	log.info Col_count
+
+	log.info "Adding DataSource Properties"
+	def TestStep = testRunner.testCase.getTestStepByName("DataSource")
+	def Property_Name
+	for(i = 0; i &lt; Col_count; i++){
+		cell = row.getCell(i)
+		def Cell_Value = String.valueOf(cell)
+		log.info "Adding: " + Cell_Value
+		TestStep.addProperty(Cell_Value)
+	}
+}
+
+
+//**************Reading Excel and adding Property to RunTime DataSource***********
+if(RunTimeDataSource_Flag == true){
+	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
+	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
+	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
+	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
+	HSSFRow row; 
+	HSSFCell cell;
+	
+	row = sheet.getRow(0)
+	def Col_count = row.getLastCellNum()
+	log.info Col_count
+
+	log.info "Adding DataSource Properties"
+	def TestStep = testRunner.testCase.getTestStepByName("DataSource_RunTime")
+	def Property_Name
+	for(i = 0; i &lt; Col_count; i++){
+		cell = row.getCell(i)
+		def Cell_Value = String.valueOf(cell)
+		log.info "Adding: " + Cell_Value
+		TestStep.addProperty(Cell_Value)
+	}
+}</script>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077">
     <con:settings/>
     <con:config service="History-Fault Code" resourcePath="/api/v1/history" methodName="History-Fault Code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -11,7 +149,21 @@
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:request/>
+        <con:request>{
+
+  "applianceId":"${#Project#Appliance_SAID}",
+
+  "groupBy": ,
+
+  "attributeNames":"System_FaultCode",
+
+  "startTime":"1533580200000",
+
+  "endTime":"1533666599000",
+
+  "maxRows":"5"
+
+}</con:request>
         <con:assertion type="Valid HTTP Status Codes" id="d53d8b9e-8c28-42b1-94e2-7ad8c496e615" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
