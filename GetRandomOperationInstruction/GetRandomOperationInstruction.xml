@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="GetRandomOperationInstruction" path="/reclaim/random/operations/WPR44VB8AKF63" id="dae64791-de49-4dfa-8caf-b7c803359055" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dae64791-de49-4dfa-8caf-b7c803359055fileName">GetRandomOperationInstruction</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GetRandomOperationInstruction" id="0eb172c0-1007-4bae-a920-f231b20fd081" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Content-Type</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-region</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-country</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-brand</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/reclaim/random/operations/WPR44VB8AKF63">wpr:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/reclaim/random/operations/WPR44VB8AKF63">wpr:Response</con:element>
+    </con:representation>
+    <con:request name="GetRandomOperationInstruction" id="115de577-0f82-4ba4-9bed-59a73bc7cee1" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Authorization" value="${access_token}"/>
+        <con:entry key="wp-client-country" value="US"/>
+        <con:entry key="wp-client-brand" value="Whirlpool"/>
+        <con:entry key="Content-Type" value="application/json"/>
+        <con:entry key="wp-client-region" value="NAR"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

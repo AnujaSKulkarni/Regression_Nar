@@ -179,5 +179,3 @@ History-Fault-Code
 Reclaim-Appliance-copy
 GetRandomOperationInstruction
 GetRandomOperationStatus
-Regression-Suite
-REST-Virt-1

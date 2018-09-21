@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="be0990e5-b44e-471b-a207-22bd1ce10cba" wadlVersion="http://wadl.dev.java.net/2009/02" name="GetRandomOperationInstruction" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="be0990e5-b44e-471b-a207-22bd1ce10cbafileName">GetRandomOperationInstruction</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

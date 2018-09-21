@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="History" path="/api/v1/history" id="5070d980-b287-417d-935a-0ae1ddee013e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="History" path="/history" id="5070d980-b287-417d-935a-0ae1ddee013e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5070d980-b287-417d-935a-0ae1ddee013efileName">History</con:setting>
   </con:settings>
@@ -28,9 +28,15 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404</con:status>
+      <con:status>404 401 400</con:status>
       <con:params/>
       <con:element xmlns:his="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/api/v1/api/v1/history">his:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:his="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/api/v1/api/v1/history">his:Response</con:element>
     </con:representation>
     <con:request name="History-Fault Code" id="0bd62b80-7381-4970-ac83-ddb4cc02e038" mediaType="application/json" postQueryString="false">
       <con:settings>

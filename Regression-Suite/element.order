@@ -133,6 +133,7 @@ SameDayCheck.xml
 Update_Password.xml
 outofThreshold.xml
 createcommandScheduler.xml
+Reclaim-Appliance-copy.xml
 Delete-timer.xml
 UnClaim-Appliance1.xml
 Unlink-Inviation.xml
@@ -140,4 +141,6 @@ getCountriesAndStates.xml
 Command-and-Control---Set-Attribute%28s%29.xml
 UnRegisterDeviceIdForPush.xml
 Delete-Account.xml
+GetRandomOperationInstruction.xml
+GetRandomOperationStatus.xml
 Test_Run_Summary.xml

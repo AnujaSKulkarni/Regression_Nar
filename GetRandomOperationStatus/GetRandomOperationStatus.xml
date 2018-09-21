@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="GetRandomOperationStatus" path="/reclaim/random/operations/status/WPR44VB8AKF63" id="a7aec966-17d0-49d9-a69d-f90d93ea67af" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a7aec966-17d0-49d9-a69d-f90d93ea67affileName">GetRandomOperationStatus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="GetRandomOperationStatus" id="8189b3ec-efec-45bb-8044-a56438981085" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Content-Type</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/reclaim/random/operations/status/WPR44VB8AKF63">wpr:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/reclaim/random/operations/status/WPR44VB8AKF63">wpr:Fault</con:element>
+    </con:representation>
+    <con:request name="GetRandomOperationStatus" id="aa30004b-7ac6-4c41-b700-9cef3db790e6" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

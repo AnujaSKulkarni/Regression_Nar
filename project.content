@@ -176,6 +176,9 @@ updateInventoryMobile\UpdateInventoryMobile.xml
 user-search\user-search.xml
 History--Energy\History--Energy.xml
 History-Fault-Code\History.xml
+Reclaim-Appliance-copy\Reclaim-Appliance-copy.xml
+GetRandomOperationInstruction\GetRandomOperationInstruction.xml
+GetRandomOperationStatus\GetRandomOperationStatus.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml
@@ -311,6 +314,7 @@ Regression-Suite\SameDayCheck.xml
 Regression-Suite\Update_Password.xml
 Regression-Suite\outofThreshold.xml
 Regression-Suite\createcommandScheduler.xml
+Regression-Suite\Reclaim-Appliance-copy.xml
 Regression-Suite\Delete-timer.xml
 Regression-Suite\UnClaim-Appliance1.xml
 Regression-Suite\Unlink-Inviation.xml
@@ -318,5 +322,7 @@ Regression-Suite\getCountriesAndStates.xml
 Regression-Suite\Command-and-Control---Set-Attribute%28s%29.xml
 Regression-Suite\UnRegisterDeviceIdForPush.xml
 Regression-Suite\Delete-Account.xml
+Regression-Suite\GetRandomOperationInstruction.xml
+Regression-Suite\GetRandomOperationStatus.xml
 Regression-Suite\Test_Run_Summary.xml
 REST-Virt-1\%2Fclient_auth%2Faccounts.xml

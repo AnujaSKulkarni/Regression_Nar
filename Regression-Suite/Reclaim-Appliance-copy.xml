@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a0502374-32b9-4771-9472-14e55266efeb" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="2bf63215-ed44-4e80-98b9-59fd1ca952b3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Reclaim Appliance copy" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="47a5a4ff-7c66-451c-821d-cae4e587c949fileName">Delete-Client-Version</con:setting>
-    <con:setting id="a0502374-32b9-4771-9472-14e55266efebfileName">Delete-Client-Version</con:setting>
+    <con:setting id="2bf63215-ed44-4e80-98b9-59fd1ca952b3fileName">Reclaim-Appliance-copy</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="ad57d058-bdb0-40b6-b665-bd98512b0ffd">
+  <con:testStep type="groovy" name="DataSource_Setup" id="e69ea59a-7ff8-493f-80a1-e329c858da23">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,23 +142,44 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="3a36d986-a846-4ffb-9e75-04691cba030d">
+  <con:testStep type="restrequest" name="Get Member Token" id="d8bc3cd9-e187-41d5-b2ca-5ccc50bea8fd">
     <con:settings/>
-    <con:config>
-      <script>def Response = context.expand( '${#[Regression Suite#Create Client Version#Create Client Version]#Response#$[\'response\']}' )
-log.info Response
-String[] tempResponse = Response.split(" : ")
-tempResponse = tempResponse[1].split(" Created")
-log.info tempResponse[0]
-testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</script>
+    <con:config service="GET Member Token" methodName="GET Member Token" resourcePath="/oauth/token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get Member Token" id="be7c5636-2f2b-47c1-8484-bc26c2d2a6b0" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://oauth/tok</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/oauth/token</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f6114736-8fd8-4eaa-a9f3-57bf1b18770a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="password" value="Whirlpool123$"/>
+          <con:entry key="grant_type" value="password"/>
+          <con:entry key="client_secret" value="syntel123$"/>
+          <con:entry key="client_id" value="syntel"/>
+          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
+        </con:parameters>
+      </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="c42fb7b1-30eb-4af1-9f12-40142a46d557">
+  <con:testStep type="datasource" name="DataSource" id="2507f026-846d-4dba-b6ad-8bff1d632018">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${#Project#Test_Data_Path}</file>
+          <file>SoapUI/Test_Data.xlsx</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -256,54 +276,39 @@ testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</scri
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="4f71d8eb-64fe-43d6-90fd-28f429b4b6a9">
+  <con:testStep type="groovy" name="flow control" id="98e07c41-147e-4f56-b38d-8adfc707ec99">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	log.info "Skipping"
-	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(true)
+	testRunner.testCase.testSteps['Reclaim Appliance copy'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(false)
+	testRunner.testCase.testSteps['Reclaim Appliance copy'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Delete Client Version" id="6d32ede7-d9ae-423d-8760-7f3af612c100" disabled="true">
+  <con:testStep type="restrequest" name="Reclaim Appliance copy" id="1eb22ff5-5d33-4064-b830-1b951d009581">
     <con:settings/>
-    <con:config service="Delete Client Version" resourcePath="/delete_client_version/${#TestCase#Client_Version_ID}" methodName="Delete Client Version" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Delete Client Version" id="4023bdeb-f938-44ec-8701-590c0d128342" mediaType="application/json" postQueryString="false">
+    <con:config service="Reclaim Appliance copy" resourcePath="/appliances/reclaim" methodName="Reclaim Appliance copy" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Reclaim Appliance copy" id="90fddf9e-594a-43b3-8bac-392c84752d23" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>{{Account}}</con:endpoint>
-        <con:request/>
-        <con:originalUri>https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25</con:originalUri>
-        <con:assertion type="MessageContentAssertion" id="a9fac8f0-b908-43b9-9e28-e5176a632902" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25';
-//ns1:Response[1]/ns1:status[1]</con:xpath>
-              <con:element>status</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>Success</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response xmlns="https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25">
-   <code/>
-   <message>Client Version Id : 25 Deleted Successfully</message>
-   <status>Success</status>
-</Response>]]></con:originalMessage>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Valid HTTP Status Codes" id="4f13f21f-a055-4d3f-bbff-83d9811a57b6" name="Valid HTTP Status Codes">
+        <con:request>{
+        "applianceName": "MHC 76 microwave oven",
+        "said": "WPR44VB8AKF63",
+        "locationId": 3183,
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjgxOTAsInVzZXJfbmFtZSI6IldDTE9VRF9BRE1JTl9BQ0NPVU5UX1NPQVBVSUBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImRhYWRjZDU0LTM1ZDctNDEwNy04NTgyLWFhM2FmNTNkMWE3MSIsImV4cCI6MTUzNzQzMDYyOSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX0FETUlOIl0sImp0aSI6Ijk3ZTI3ZTY2LTQzZjItNDc5My05M2YwLTc4YWM0NTZiOGU1ZiIsImNsaWVudF9pZCI6InN5bnRlbCIsIlNBSUQiOlsiV1BSMzMzMzZMVksyQSIsIldQUjMzMzM3TDNMNTUiLCJXUFIzMzMzOFZQUjQ5IiwiV1BSNDRWQjhBS0Y2MyIsIldQUjRFUk42V1dHQzciLCJXUFI0RkhHR0ZETkNCIl19.uGfRAzeKUjr0DT61ap4A7iyxapO0sxzI1-28ov9jsPc"
+ }</con:request>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/reclaim</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="dda54ac6-aa81-43f1-ab78-ddc8392acaa2" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -315,53 +320,23 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <con:entry key="Authorization" value="application/json"/>
+          <con:entry key="wp-client-country" value="US"/>
+          <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <con:entry key="wp-client-region" value="NAR"/>
+          <con:entry key="Content-Type" value="Bearer ${#Project#access_token}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="c75be53a-db0f-4508-8cae-c67686d4db93">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="71858738-5537-4cd1-a637-761cf5a76f30">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="67d9225f-3a1c-4299-afc9-75dc74fff747">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="3fe514a6-107b-43c8-9505-30cc434b3b4e" disabled="true">
+  <con:testStep type="groovy" name="Report" id="bb885e61-f6aa-4d55-901a-ca862585eb00">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -492,42 +467,34 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="240b184d-1bf2-4daa-853c-268f27121b72">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="7c37a3a4-3a3d-42fb-9879-39bcb7ae4376">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Flow Control</targetStep>
+      <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>Client_Version_ID</con:name>
-      <con:value>3427</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>4efaf044-5daa-424f-9110-e1843fce6dfd</con:testStepId>
+    <con:testStepId>e69ea59a-7ff8-493f-80a1-e329c858da23</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>c8f06e2e-a988-4490-8f00-495363d59861</con:testStepId>
+    <con:testStepId>98e07c41-147e-4f56-b38d-8adfc707ec99</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:environmentSpec>
-    <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:breakPoints>
+    <con:testStepId>2507f026-846d-4dba-b6ad-8bff1d632018</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>d8bc3cd9-e187-41d5-b2ca-5ccc50bea8fd</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
 </con:testCase>

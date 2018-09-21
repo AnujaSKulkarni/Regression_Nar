@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a0502374-32b9-4771-9472-14e55266efeb" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="9c1c89b4-bea8-4c4b-8953-ddc69e8def0a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetRandomOperationInstruction" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="47a5a4ff-7c66-451c-821d-cae4e587c949fileName">Delete-Client-Version</con:setting>
-    <con:setting id="a0502374-32b9-4771-9472-14e55266efebfileName">Delete-Client-Version</con:setting>
+    <con:setting id="9c1c89b4-bea8-4c4b-8953-ddc69e8def0afileName">GetRandomOperationInstruction</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="ad57d058-bdb0-40b6-b665-bd98512b0ffd">
+  <con:testStep type="groovy" name="DataSource_Setup" id="ddacb4fa-ecb7-40ec-84e1-62000a8405ba">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,18 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="3a36d986-a846-4ffb-9e75-04691cba030d">
-    <con:settings/>
-    <con:config>
-      <script>def Response = context.expand( '${#[Regression Suite#Create Client Version#Create Client Version]#Response#$[\'response\']}' )
-log.info Response
-String[] tempResponse = Response.split(" : ")
-tempResponse = tempResponse[1].split(" Created")
-log.info tempResponse[0]
-testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="c42fb7b1-30eb-4af1-9f12-40142a46d557">
+  <con:testStep type="datasource" name="DataSource" id="3b5141b1-d793-450b-a0c7-002eb5804dfe">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -256,54 +244,34 @@ testRunner.testCase.setPropertyValue("Client_Version_ID", tempResponse[0])</scri
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="4f71d8eb-64fe-43d6-90fd-28f429b4b6a9">
+  <con:testStep type="groovy" name="flow control" id="1b50f3aa-efbb-409e-a9e2-3665cfee06a9">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	log.info "Skipping"
-	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(true)
+	testRunner.testCase.testSteps['GetRandomOperationInstruction'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['Delete Client Version'].setDisabled(false)
+	testRunner.testCase.testSteps['GetRandomOperationInstruction'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Delete Client Version" id="6d32ede7-d9ae-423d-8760-7f3af612c100" disabled="true">
+  <con:testStep type="restrequest" name="GetRandomOperationInstruction" id="5584a680-e65e-4271-b813-7665de3553f2" disabled="true">
     <con:settings/>
-    <con:config service="Delete Client Version" resourcePath="/delete_client_version/${#TestCase#Client_Version_ID}" methodName="Delete Client Version" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Delete Client Version" id="4023bdeb-f938-44ec-8701-590c0d128342" mediaType="application/json" postQueryString="false">
+    <con:config service="GetRandomOperationInstruction" resourcePath="/reclaim/random/operations/WPR44VB8AKF63" methodName="GetRandomOperationInstruction" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetRandomOperationInstruction" id="115de577-0f82-4ba4-9bed-59a73bc7cee1" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>{{Account}}</con:endpoint>
         <con:request/>
-        <con:originalUri>https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25</con:originalUri>
-        <con:assertion type="MessageContentAssertion" id="a9fac8f0-b908-43b9-9e28-e5176a632902" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:elements>
-              <con:xpath>declare namespace ns1='https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25';
-//ns1:Response[1]/ns1:status[1]</con:xpath>
-              <con:element>status</con:element>
-              <con:type xsi:nil="true"/>
-              <con:operator>=</con:operator>
-              <con:enabled>true</con:enabled>
-              <con:expectedValue>Success</con:expectedValue>
-              <con:hasValue>false</con:hasValue>
-              <con:numberType>false</con:numberType>
-            </con:elements>
-            <con:originalMessage><![CDATA[<Response xmlns="https://accountserviceqa-v2.mybluemix.net/api/v1/delete_client_version/25">
-   <code/>
-   <message>Client Version Id : 25 Deleted Successfully</message>
-   <status>Success</status>
-</Response>]]></con:originalMessage>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="Valid HTTP Status Codes" id="4f13f21f-a055-4d3f-bbff-83d9811a57b6" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/reclaim/random/operations/WPR44VB8AKF63</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="a1fcceb8-1e24-4f4e-8055-d3095d7b9106" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -315,53 +283,23 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <con:entry key="Authorization" value="bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}"/>
+          <con:entry key="wp-client-country" value="US"/>
+          <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <con:entry key="Content-Type" value="application/json"/>
+          <con:entry key="wp-client-region" value="NAR"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="c75be53a-db0f-4508-8cae-c67686d4db93">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="71858738-5537-4cd1-a637-761cf5a76f30">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="67d9225f-3a1c-4299-afc9-75dc74fff747">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="3fe514a6-107b-43c8-9505-30cc434b3b4e" disabled="true">
+  <con:testStep type="groovy" name="Report" id="af3874d0-bcee-4423-9a69-805ef07892a6">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -492,42 +430,29 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="240b184d-1bf2-4daa-853c-268f27121b72">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="c9d27adb-6400-45e2-916f-f0b12deb45c2">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Flow Control</targetStep>
+      <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>Client_Version_ID</con:name>
-      <con:value>3427</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>4efaf044-5daa-424f-9110-e1843fce6dfd</con:testStepId>
+    <con:testStepId>ddacb4fa-ecb7-40ec-84e1-62000a8405ba</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>c8f06e2e-a988-4490-8f00-495363d59861</con:testStepId>
+    <con:testStepId>3b5141b1-d793-450b-a0c7-002eb5804dfe</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:environmentSpec>
-    <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:breakPoints>
+    <con:testStepId>1b50f3aa-efbb-409e-a9e2-3665cfee06a9</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
 </con:testCase>

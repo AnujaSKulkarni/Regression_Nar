@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Stage" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
@@ -76,6 +76,12 @@
     </con:property>
     <con:property>
       <con:name>Appliance_SAID</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Appliance_id</con:name>
+    </con:property>
+    <con:property>
+      <con:name>alert id</con:name>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -626,9 +632,18 @@
     <con:service type="REST" name="History-Fault Code">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="Reclaim Appliance copy">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationInstruction">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/api/v1</con:value>
+      <con:value>https://api-test.whrcloud.com/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
@@ -636,7 +651,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzYwNTg5NjEsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwMGU2OGI2Mi0yN2QxLTQ1NzUtYWQxNC01M2E0NjA0YjNhYmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.LANSuWb0B0o57K1baXpvECfFqww9NfRSiOLtaDzo_u4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc1MzI0NzAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJlNmI1NDA2NC02NjdmLTQ1NGItOWJmYS0yMjc3OTk1OWI1ZDkiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.5BRfwlpCbxxV2Tu1DGK0FDdooP0POkGx1kkg0aEpOjw</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -648,19 +663,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-04/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-21/Run_Number_3/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-04/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-21/Run_Number_3/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjgxOTAsInVzZXJfbmFtZSI6IldDTE9VRF9BRE1JTl9BQ0NPVU5UX1NPQVBVSUBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUzNjA1OTczNywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX0FETUlOIl0sImp0aSI6ImJkNzU3MTg4LTYzMDItNDI0MS04NjZlLTNhOWZmM2U3NzhiZiIsImNsaWVudF9pZCI6InN5bnRlbCIsIlNBSUQiOlsiV1BSMzMzMzM0UkE5NiIsIldQUjMzMzM2TFZLMkEiLCJXUFIzMzMzN0wzTDU1IiwiV1BSMzMzMzhWUFI0OSIsIldQUjRFUk42V1dHQzciLCJXUFI0RkhHR0ZETkNCIiwiV1BSMzMzMzM0VUNEMyJdfQ.f9OfDMC01dSSQ51HUCAFulYUMuCxZ0YMFKdZ2I6ACbI</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTY4LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzExXzUxXzEwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3NTMyNDc2LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3MTdiNjgxMy1iMmVhLTQ3MzQtYTA1Ni02YjYyNzM4MWFlYzUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.ovfphNgtoUJ3yKgb9VcSmaZ3eSuKGf_XPY-WjFEVjkY</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value/>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTY4LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzExXzUxXzEwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNzE3YjY4MTMtYjJlYS00NzM0LWEwNTYtNmI2MjczODFhZWM1IiwiZXhwIjoxNTM4ODA2ODc2LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJjZDY2MjIzZC0zNGFmLTQyNjktYWQ1YS1iNTRmODc3MmY4NDgiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.E5xPAu9o_ze7b77GQ8KGhbf6ICH0IkHVlFOgfDrn4GE</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -713,6 +728,14 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR333334UCD3</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Appliance_id</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>alert id</con:name>
+      <con:value/>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1255,10 +1278,19 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History -Energy">
-      <con:endpoint authProfile="No Authorization">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History-Fault Code">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Reclaim Appliance copy">
       <con:endpoint authProfile="No Authorization">https://{{API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationInstruction">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -1270,7 +1302,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzU5OTU0MzMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI0OTc4MGYwZi0zODViLTRlNDItYTc4Yi0xYTI0MGI5ODA4ZDQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.YVIb5PVCDdSeugBBkq5EAmX9snYLyksi9RCK9OCEMH4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc1NDk5MjcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI1YzZhNjdjOC00NGMzLTRmNmQtOWY1NC0xN2Y1NTJkMzliMTciLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.gr7zLPDeWdWLbkQtBNxRAS4zitpnnjP_EsuSwdrrkIo</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1282,19 +1314,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-03/Run_Number_5/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-21/Run_Number_2/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-03/Run_Number_5/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-21/Run_Number_2/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNTA4LCJ1c2VyX25hbWUiOiJNT05fU0VQXzAzXzE2XzU3XzUxX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM1OTk1NjgxLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3NDU3ODg1Mi0yNmZkLTQ1OGQtOWY1YS0yZjA2ZWM4M2Y1MjUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.QfILkYIt6AGjOMKfPVaHiXQ2LmU_6GHZ5l1kCFlc8Q0</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjM0LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzE2XzQyXzExX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3NTQ5OTQwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3N2RjZTRhNS01M2FkLTRmMTgtYjk4Yy1lMDcxNGExMTczNGYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.YRQxHSb8vyt6U-X-MnRp3lJCo0Hwye0Fg92fd_NRL5M</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNTA4LCJ1c2VyX25hbWUiOiJNT05fU0VQXzAzXzE2XzU3XzUxX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNzQ1Nzg4NTItMjZmZC00NThkLTlmNWEtMmYwNmVjODNmNTI1IiwiZXhwIjoxNTM3MjcwMDgxLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIxNGQ1NGUyMy0wOTA2LTRiNDMtOGM2Ny03OThjNjgzZGRhYTkiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.qggnG_98QopgzAmuRFglYDsX_N-xI9OdISg7TAPQYEQ</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjM0LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzE2XzQyXzExX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNzdkY2U0YTUtNTNhZC00ZjE4LWI5OGMtZTA3MTRhMTE3MzRmIiwiZXhwIjoxNTM4ODI0MzQwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyYjMzMzMwMi04OGQ0LTQ4YzUtYTczNS1mMzU0ZmZlYjQ5NWEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.1jxGWOpKSvwbKguW2joRjrjrmLSkJWeIz2BAM903F98</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -1347,6 +1379,14 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR333334UCD3</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Appliance_id</con:name>
+      <con:value>505</con:value>
+    </con:property>
+    <con:property>
+      <con:name>alert id</con:name>
+      <con:value>43</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1894,6 +1934,15 @@
     <con:service type="REST" name="History-Fault Code">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
+    <con:service type="REST" name="Reclaim Appliance copy">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationInstruction">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api-test.whrcloud.com/api/v1</con:value>
@@ -1981,6 +2030,14 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR333334UCD3</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Appliance_id</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>alert id</con:name>
+      <con:value/>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -2528,6 +2585,15 @@
     <con:service type="REST" name="History-Fault Code">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
+    <con:service type="REST" name="Reclaim Appliance copy">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationInstruction">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api-test.whrcloud.com/api/v1</con:value>
@@ -2615,6 +2681,14 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR333334UCD3</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Appliance_id</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>alert id</con:name>
+      <con:value/>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>

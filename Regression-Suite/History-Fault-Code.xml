@@ -147,9 +147,9 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file/>
-          <worksheet/>
-          <cell>A1</cell>
+          <file>${#Project#Test_Data_Path}</file>
+          <worksheet>Data</worksheet>
+          <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
           <evaluateFormulas>false</evaluateFormulas>
         </con:configuration>
@@ -264,7 +264,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077" disabled="true">
     <con:settings/>
-    <con:config service="History-Fault Code" resourcePath="/api/v1/history" methodName="History-Fault Code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="History-Fault Code" resourcePath="/history" methodName="History-Fault Code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="History-Fault Code" id="0bd62b80-7381-4970-ac83-ddb4cc02e038" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -273,7 +273,7 @@ if (API_Name != TestCaseName){
 
   "applianceId":"${#Project#Appliance_SAID}",
 
-  "groupBy":${DataSource#Group By} ,
+  "groupBy":${DataSource#Group By},
 
   "attributeNames":${DataSource#Attribute_Name},
 
@@ -296,7 +296,9 @@ if (API_Name != TestCaseName){
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Content-Type</con:entry>
           <con:entry>Authorization</con:entry>
@@ -439,7 +441,7 @@ out.close()</script>
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>DataSource</targetStep>
+      <targetStep>flow control</targetStep>
       <discardResults>true</discardResults>
     </con:config>
   </con:testStep>

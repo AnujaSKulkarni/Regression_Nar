@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Reclaim Appliance copy" path="/appliances/reclaim" id="7a76767d-bd97-4dd0-a78f-3be795ad20d3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7a76767d-bd97-4dd0-a78f-3be795ad20d3fileName">Reclaim-Appliance-copy</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Reclaim Appliance copy" id="70e18e16-e0c4-4c5b-bfb8-cd8fa1c9cd2a" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Content-Type</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-region</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-country</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-brand</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>415</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400 401</con:status>
+      <con:params/>
+      <con:element xmlns:rec="https://api-test.whrcloud.com/api/v1/appliances/reclaim">rec:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Reclaim Appliance copy" id="90fddf9e-594a-43b3-8bac-392c84752d23" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://{{API-Connect}}</con:endpoint>
+      <con:request>{
+        "applianceName": "MHC 76 microwave oven",
+        "said": "WPR44VB8AKF63",
+        "locationId": 3183,
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjgxOTAsInVzZXJfbmFtZSI6IldDTE9VRF9BRE1JTl9BQ0NPVU5UX1NPQVBVSUBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImRhYWRjZDU0LTM1ZDctNDEwNy04NTgyLWFhM2FmNTNkMWE3MSIsImV4cCI6MTUzNzQzMDYyOSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX0FETUlOIl0sImp0aSI6Ijk3ZTI3ZTY2LTQzZjItNDc5My05M2YwLTc4YWM0NTZiOGU1ZiIsImNsaWVudF9pZCI6InN5bnRlbCIsIlNBSUQiOlsiV1BSMzMzMzZMVksyQSIsIldQUjMzMzM3TDNMNTUiLCJXUFIzMzMzOFZQUjQ5IiwiV1BSNDRWQjhBS0Y2MyIsIldQUjRFUk42V1dHQzciLCJXUFI0RkhHR0ZETkNCIl19.uGfRAzeKUjr0DT61ap4A7iyxapO0sxzI1-28ov9jsPc"
+ }</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Authorization" value="Bearer ${#Project#access_token}"/>
+        <con:entry key="wp-client-country" value="US"/>
+        <con:entry key="wp-client-brand" value="Whirlpool"/>
+        <con:entry key="wp-client-region" value="NAR"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
