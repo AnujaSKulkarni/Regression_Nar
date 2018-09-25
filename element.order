@@ -77,7 +77,7 @@ Get-Template-Implementation
 Get-User-Nest-Preference
 Get-Value-of-attribute-for-particular-entity
 Get-access-token
-Get-device-shadow-for-id
+Get-device-shadow-for-id_old
 Get-location-by-locationId
 Get-replenishment
 GetNotificationTemplate
@@ -179,5 +179,6 @@ History-Fault-Code
 Reclaim-Appliance-copy
 GetRandomOperationInstruction
 GetRandomOperationStatus
+Get-device-shadow-for-id
 Regression-Suite
 REST-Virt-1

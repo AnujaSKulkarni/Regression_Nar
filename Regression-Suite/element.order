@@ -98,7 +98,9 @@ Energy_providers.xml
 Rate-Revealer.xml
 UnClaim-Appliance.xml
 Appliance-Wraper.xml
+Get-device-shadow-for-id_old.xml
 Get-device-shadow-for-id.xml
+Check_DeviceShadow.xml
 Authorize-NEST-user.xml
 UpdateUserNestPreference.xml
 Get-User-Nest-Preference.xml

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8fc510d2-2dea-4d71-8733-7348586724c7" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Resend Email Confirmation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="e3cc77f1-52eb-4caa-b656-2abdcb66e40d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get device shadow for id_old" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="0366d31c-292c-4a87-9ec7-2ceaaacb978efileName">Resend-Email-Confirmation</con:setting>
-    <con:setting id="8fc510d2-2dea-4d71-8733-7348586724c7fileName">Resend-Email-Confirmation</con:setting>
+    <con:setting id="3e2816f5-1f38-44f1-8f22-9acd34591bc5fileName">Get-device-shadow-for-id</con:setting>
+    <con:setting id="e3cc77f1-52eb-4caa-b656-2abdcb66e40dfileName">Get-device-shadow-for-id_old</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="cc2fa3f6-31d5-4144-ba01-44f76a9e8a2a">
+  <con:testStep type="groovy" name="DataSource_Setup" id="51823700-dd36-4359-8899-77e41a68a4dd">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,43 +143,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource_RunTime" id="a55edb40-8e70-46ad-a88b-bf67c8a9cd18">
-    <con:settings/>
-    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:dataSource type="Excel">
-        <con:configuration>
-          <file>${#Project#Run_Time_Data}</file>
-          <worksheet>Account_Run_Time_Data</worksheet>
-          <cell>A2</cell>
-          <ignoreEmpty>true</ignoreEmpty>
-          <evaluateFormulas>false</evaluateFormulas>
-        </con:configuration>
-      </con:dataSource>
-      <con:shared>true</con:shared>
-      <con:restartShared>true</con:restartShared>
-      <con:property>Account_ID_Number</con:property>
-      <con:property>Verification_Code</con:property>
-      <con:property>Email_ID</con:property>
-      <con:property>Group_ID</con:property>
-      <con:completeLastOperation>true</con:completeLastOperation>
-      <con:restartOnRun>true</con:restartOnRun>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="d567684b-1b2f-4d06-997c-754815aa5c6c">
-    <con:settings/>
-    <con:config>
-      <script>def account_ID_Number = context.expand( '${DataSource_RunTime#Account_ID_Number}' )
-def verification_Code = context.expand( '${DataSource_RunTime#Verification_Code}' )
-def Email_ID = context.expand( '${DataSource_RunTime#Email_ID}' )
-
-log.info account_ID_Number
-log.info verification_Code
-testRunner.testCase.testSuite.setPropertyValue("Account_ID", account_ID_Number)
-testRunner.testCase.testSuite.setPropertyValue("Verification_Code", verification_Code)
-testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="8df00596-7f8d-4055-afed-70471452f738">
+  <con:testStep type="datasource" name="DataSource" id="da9b99f6-d849-433b-ae95-e325196c2994">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -281,7 +245,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="49395233-b28a-4421-8c07-7e76b1bd663d">
+  <con:testStep type="groovy" name="Flow Control" id="d7719f68-8443-44c0-bcb2-7e001ceae96d">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -289,69 +253,48 @@ def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	log.info "Skipping"
 	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
-	testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(true)
-	testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(true)
+	testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(true)
+	testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
 	if(dataCombination == "Positive"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
-		testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(false)
-		testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(true)
+		testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(false)
+		testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(true)
 		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 	if(dataCombination == "Negative"){
 		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
-		testRunner.testCase.testSteps['Resend Email Confirmation_Positive'].setDisabled(true)
-		testRunner.testCase.testSteps['Resend Email Confirmation_Negative'].setDisabled(false)
+		testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(true)
+		testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(false)
 		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="9d622da3-546e-4354-9605-8534df64e3fa" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="e5d38e4d-65a4-435e-885c-660758805f4a" disabled="true">
     <con:settings/>
     <con:config>
-      <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
-def Account_ID_Sheet = context.expand( '${DataSource#Account_Number}' )
-log.info "From Sheet" + Account_ID_Sheet
-Account_ID_Sheet = Account_ID_Sheet.replace("\"", "")
-def Account_ID_Property = context.expand( '${#TestSuite#Account_ID}' )
-log.info "From Properties" + Account_ID_Property
-if (data_Combination == "Positive"){
-	testRunner.testCase.setPropertyValue("Account_ID",Account_ID_Property)
-}
-if (data_Combination == "Negative"){
-	testRunner.testCase.setPropertyValue("Account_ID",Account_ID_Sheet)
-}
-def tC_Number = context.expand( '${DataSource#TC_Number}' )
-log.info tC_Number</script>
+      <script>def Device_Shadow = context.expand( '${DataSource#Device_Shadow_Name}' )
+def Device_Shadow_Name = Device_Shadow.replace("\"", "")
+testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Resend Email Confirmation_Positive" id="e546098a-ed0e-48e5-83f4-c5039f1e5363" disabled="true">
+  <con:testStep type="restrequest" name="Get device shadow for id_Positive" id="9f244845-5349-40f6-8e58-6245d83c170b" disabled="true">
     <con:settings/>
-    <con:config service="Resend Email Confirmation" resourcePath="/client_auth/accounts/${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['email']}/confirmations/resend" methodName="Resend Email Confirmation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Resend Email Confirmation_Positive" id="49ced10b-024a-4800-811c-3312adada08e" mediaType="application/json">
+    <con:config service="Get device shadow for id_old" resourcePath="/appliance/${#Project#Appliance_SAID}" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get device shadow for id_Positive" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>${#Project#API-Connect}</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/accounts/resend_confirmation/4211</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="bc672d61-9a88-452a-9bf5-842862726c6c" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4560e4c4-8470-482f-a044-8f931bfc20ea" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>400</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:assertion type="MessageContentAssertion" id="998083a1-153e-438d-95c8-181e5e68be9e" name="Message Content Assertion">
-          <con:configuration xsi:type="con:MessageContentAssertion">
-            <con:originalMessage><![CDATA[<Fault xmlns="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/accounts/resend_confirmation/4211">
-   <code>400</code>
-   <message>Account is already confirmed</message>
-   <status>FAILURE</status>
-</Fault>]]></con:originalMessage>
+            <codes>200</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -361,16 +304,10 @@ log.info tC_Number</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${#Project#access_token}"/>
-          <con:entry key="wp-client-country" value="US"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
-          <con:entry key="wp-client-region" value="NAR"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
-          <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
@@ -428,20 +365,20 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Resend Email Confirmation_Negative" id="1726c716-9fcb-4c19-a694-f71b95ee2016" disabled="true">
+  <con:testStep type="restrequest" name="Get device shadow for id_Negative" id="01895e3b-329b-44ed-a491-1f7228b12005" disabled="true">
     <con:settings/>
-    <con:config service="Resend Email Confirmation" resourcePath="/client_auth/accounts/${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['email']}/confirmations/resend" methodName="Resend Email Confirmation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Resend Email Confirmation_Negative" id="49ced10b-024a-4800-811c-3312adada08e" mediaType="application/json">
+    <con:config service="Get device shadow for id_old" resourcePath="/appliance/${#Project#Appliance_SAID}" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get device shadow for id_Negative" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>${#Project#API-Connect}</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/accounts/resend_confirmation/4211</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="bc672d61-9a88-452a-9bf5-842862726c6c" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="e4c575c4-5854-453c-ae38-c72b2fef6775" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>500,404,400</codes>
+            <codes>404</codes>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -451,15 +388,10 @@ log.info tC_Number</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="wp-client-country" value="US"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
-          <con:entry key="wp-client-region" value="NAR"/>
+          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
-          <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
         <con:environmentSpec>
           <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
@@ -517,7 +449,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="19854e25-c4f7-43e5-b9e4-5d1c8723c624" disabled="true">
+  <con:testStep type="groovy" name="Report" id="af30f385-1195-4aad-b5b6-63a615ceb546" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -653,7 +585,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="6ce1dcee-2c84-4013-b5e2-00ad34a717d2">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="1b9f3b12-f8e6-4c66-a8c1-d3b0038e1f7d">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -662,33 +594,28 @@ out.close()</script>
   </con:testStep>
   <con:properties>
     <con:property>
-      <con:name>Account_ID</con:name>
-      <con:value>18575</con:value>
+      <con:name>Device_Shadow_Name</con:name>
+      <con:value>WPR11111</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>6a0ae9f4-5c3d-4f9a-a615-dd661f626238</con:testStepId>
+    <con:testStepId>1523a2f9-4093-4b8d-80d0-a4a14bc691a3</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>98a177a8-195d-41dc-ace0-caca3c6b07f2</con:testStepId>
+    <con:testStepId>e24badeb-745e-43a5-b13d-e78410a5d9d4</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>9d609569-d63f-44b7-a158-5fe0745ddf43</con:testStepId>
+    <con:testStepId>1980bb37-956f-4178-984f-43fd052055d9</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>01507045-bc74-43bd-b9c6-e38ee81f9288</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>203195e1-ad98-4996-8d59-746f459a8f9c</con:testStepId>
+    <con:testStepId>e46412c2-cd1f-4d9b-9aac-8df1c5f5bbe8</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

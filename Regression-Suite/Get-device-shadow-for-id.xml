@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="e3cc77f1-52eb-4caa-b656-2abdcb66e40d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get device shadow for id" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="fa5a8620-e34f-4205-bb43-43f2f8015471" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get device shadow for id" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="3e2816f5-1f38-44f1-8f22-9acd34591bc5fileName">Get-device-shadow-for-id</con:setting>
-    <con:setting id="e3cc77f1-52eb-4caa-b656-2abdcb66e40dfileName">Get-device-shadow-for-id</con:setting>
+    <con:setting id="fa5a8620-e34f-4205-bb43-43f2f8015471fileName">Get-device-shadow-for-id</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="51823700-dd36-4359-8899-77e41a68a4dd">
+  <con:testStep type="groovy" name="DataSource_Setup" id="375f0686-51eb-40bd-bb90-a3ed86bfff99">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -143,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="da9b99f6-d849-433b-ae95-e325196c2994">
+  <con:testStep type="datasource" name="DataSource" id="dce97f22-4443-4f18-8888-6e662b9b5cbf">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -245,53 +244,34 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="d7719f68-8443-44c0-bcb2-7e001ceae96d">
+  <con:testStep type="groovy" name="flow control" id="5b3d22e3-5d76-4735-96d1-f63ec39c7fe0">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(true)
-	testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(true)
-	testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(true)
+	testRunner.testCase.testSteps['Get device shadow for id'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	if(dataCombination == "Positive"){
-		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
-		testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(false)
-		testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(true)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
-	}
-	if(dataCombination == "Negative"){
-		testRunner.testCase.testSteps['Test_Data_Setup'].setDisabled(false)
-		testRunner.testCase.testSteps['Get device shadow for id_Positive'].setDisabled(true)
-		testRunner.testCase.testSteps['Get device shadow for id_Negative'].setDisabled(false)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
-	}
+	testRunner.testCase.testSteps['Get device shadow for id'].setDisabled(false)
+	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="e5d38e4d-65a4-435e-885c-660758805f4a" disabled="true">
+  <con:testStep type="restrequest" name="Get device shadow for id" id="38ebd5a2-481b-4ae3-8520-b3a4bdd6db3a" disabled="true">
     <con:settings/>
-    <con:config>
-      <script>def Device_Shadow = context.expand( '${DataSource#Device_Shadow_Name}' )
-def Device_Shadow_Name = Device_Shadow.replace("\"", "")
-testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="restrequest" name="Get device shadow for id_Positive" id="9f244845-5349-40f6-8e58-6245d83c170b" disabled="true">
-    <con:settings/>
-    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/${#Project#Appliance_SAID}" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Get device shadow for id_Positive" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
+    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/WPR333334UCD3" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Get device shadow for id" id="70219d36-f831-4c42-ada9-d23106fa9994" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>${#Project#API-Connect}</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="4560e4c4-8470-482f-a044-8f931bfc20ea" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/deviceshadow/WPR333334UCD3</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="98078f4d-b7e0-4175-a5b1-3a4cf0ff1b80" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -302,154 +282,16 @@ testRunner.testCase.setPropertyValue("Device_Shadow_Name", Device_Shadow_Name)</
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="Bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="4398ae1d-0351-4fb3-a5a2-3711b104c124">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="dc59d3b0-2cc1-4c91-a36d-62642d50ba5a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="5c297842-d8ad-466b-8b05-f06abf54bfe2">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="276146a1-7fd3-46fe-b2f6-638c85bb127c">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="c75be53a-db0f-4508-8cae-c67686d4db93">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="71858738-5537-4cd1-a637-761cf5a76f30">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="67d9225f-3a1c-4299-afc9-75dc74fff747">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get device shadow for id_Negative" id="01895e3b-329b-44ed-a491-1f7228b12005" disabled="true">
-    <con:settings/>
-    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/${#Project#Appliance_SAID}" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Get device shadow for id_Negative" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:endpoint>${#Project#API-Connect}</con:endpoint>
-        <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="e4c575c4-5854-453c-ae38-c72b2fef6775" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>404</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
-        <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
-        </con:parameters>
-        <con:parameterOrder>
-          <con:entry>Authorization</con:entry>
-        </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="4398ae1d-0351-4fb3-a5a2-3711b104c124">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="dc59d3b0-2cc1-4c91-a36d-62642d50ba5a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="5c297842-d8ad-466b-8b05-f06abf54bfe2">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="276146a1-7fd3-46fe-b2f6-638c85bb127c">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="c75be53a-db0f-4508-8cae-c67686d4db93">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="71858738-5537-4cd1-a637-761cf5a76f30">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="67d9225f-3a1c-4299-afc9-75dc74fff747">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Report" id="af30f385-1195-4aad-b5b6-63a615ceb546" disabled="true">
+  <con:testStep type="groovy" name="Report" id="5e87493d-7479-43a2-894f-cd83f35a181a" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -488,12 +330,7 @@ def data_combination = context.expand( '${DataSource#Data_Combination}' )
 /*Get TC Name*/
 def TCN = context.expand( '${DataSource#TC_Number}' )
 def TestCaseName = testRunner.testCase.getName()
-if(data_combination == "Positive"){
-	TestCaseName = TestCaseName + "_Positive"
-}
-if(data_combination == "Negative"){
-	TestCaseName = TestCaseName + "_Negative"
-}
+
 log.info TestCaseName
 
 obj = context.testCase.getTestStepByName(TestCaseName)
@@ -585,73 +422,19 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="1b9f3b12-f8e6-4c66-a8c1-d3b0038e1f7d">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="9c2769b0-a87c-41f0-8f8c-336e7d720429">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Flow Control</targetStep>
+      <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>Device_Shadow_Name</con:name>
-      <con:value>WPR11111</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>1523a2f9-4093-4b8d-80d0-a4a14bc691a3</con:testStepId>
+    <con:testStepId>38ebd5a2-481b-4ae3-8520-b3a4bdd6db3a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e24badeb-745e-43a5-b13d-e78410a5d9d4</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>1980bb37-956f-4178-984f-43fd052055d9</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>e46412c2-cd1f-4d9b-9aac-8df1c5f5bbe8</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:environmentSpec>
-    <con:entry environmentId="4398ae1d-0351-4fb3-a5a2-3711b104c124">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="dc59d3b0-2cc1-4c91-a36d-62642d50ba5a">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="5c297842-d8ad-466b-8b05-f06abf54bfe2">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="276146a1-7fd3-46fe-b2f6-638c85bb127c">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
 </con:testCase>

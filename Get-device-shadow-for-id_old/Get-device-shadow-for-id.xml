@@ -1,80 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Appliance Wraper" path="/appliances/claim/" id="8c483efc-7222-48a3-b367-1635a329ef74" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get device shadow for id" path="/appliance/${#Project#Appliance_SAID}" id="680a9800-e083-48db-8b4e-7bddc1a59a2b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="8c483efc-7222-48a3-b367-1635a329ef74fileName">Appliance-Wraper</con:setting>
+    <con:setting id="680a9800-e083-48db-8b4e-7bddc1a59a2bfileName">Get-device-shadow-for-id</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="Appliance Wraper" id="b2a2f328-0c41-42b4-a163-2d44e40732f6" method="POST">
+  <con:method name="Get device shadow for id" id="9fe0ebb1-5c4d-46bc-b896-b700b4b499c4" method="GET">
     <con:settings/>
     <con:parameters>
       <con:parameter>
         <con:name>Authorization</con:name>
-        <con:value>Bearer {access_token}</con:value>
+        <con:value>bearer ${access_token}</con:value>
         <con:style>HEADER</con:style>
-        <con:default>Bearer {access_token}</con:default>
-        <con:description xsi:nil="true"/>
-      </con:parameter>
-      <con:parameter>
-        <con:name>wp-client-region</con:name>
-        <con:value>NAR</con:value>
-        <con:style>HEADER</con:style>
-        <con:default>NAR</con:default>
-        <con:description xsi:nil="true"/>
-      </con:parameter>
-      <con:parameter>
-        <con:name>wp-client-country</con:name>
-        <con:value>US</con:value>
-        <con:style>HEADER</con:style>
-        <con:default>US</con:default>
-        <con:description xsi:nil="true"/>
-      </con:parameter>
-      <con:parameter>
-        <con:name>wp-client-brand</con:name>
-        <con:value>Whirlpool</con:value>
-        <con:style>HEADER</con:style>
-        <con:default>Whirlpool</con:default>
+        <con:default>bearer ${access_token}</con:default>
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="REQUEST">
-      <con:mediaType>application/json</con:mediaType>
-      <con:params/>
-    </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>409 500 404 401</con:status>
+      <con:status>404 401</con:status>
       <con:params/>
-      <con:element xmlns:cla="https://api-test.whrcloud.com/api/v1/appliances/claim/">cla:Fault</con:element>
+      <con:element xmlns:wdw="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WDW000331">wdw:Fault</con:element>
     </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:cla="https://api-test.whrcloud.com/api/v1/appliances/claim/">cla:Response</con:element>
+      <con:element xmlns:wpr="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123">wpr:Response</con:element>
     </con:representation>
-    <con:representation type="RESPONSE">
-      <con:mediaType xsi:nil="true"/>
-      <con:status>0</con:status>
-      <con:params/>
-      <con:element>data</con:element>
-    </con:representation>
-    <con:request name="Appliance Wraper" id="02d3df6f-10cd-4cc3-aed7-ba657cb3edac" mediaType="application/json" postQueryString="false">
+    <con:request name="Get device shadow for id" id="29790405-256a-42ec-aa9d-8127214b09f7" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
       <con:endpoint>${QA_Env}</con:endpoint>
       <con:request/>
+      <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/deviceshadow/WPR1000101123</con:originalUri>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
       <con:parameters/>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>
-        <con:entry>wp-client-region</con:entry>
-        <con:entry>wp-client-country</con:entry>
-        <con:entry>wp-client-brand</con:entry>
       </con:parameterOrder>
       <con:environmentSpec>
         <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">

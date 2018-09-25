@@ -77,7 +77,7 @@ Get-Template-Implementation\Get-Template-Implementation.xml
 Get-User-Nest-Preference\Get-User-Nest-Preference.xml
 Get-Value-of-attribute-for-particular-entity\Get-Value-of-attribute-for-particular-entity.xml
 Get-access-token\Get-access-token.xml
-Get-device-shadow-for-id\Get-device-shadow-for-id.xml
+Get-device-shadow-for-id_old\Get-device-shadow-for-id.xml
 Get-location-by-locationId\Get-location-by-locationId.xml
 Get-replenishment\Get-replenishment.xml
 GetNotificationTemplate\GetNotificationTemplate.xml
@@ -179,6 +179,7 @@ History-Fault-Code\History.xml
 Reclaim-Appliance-copy\Reclaim-Appliance-copy.xml
 GetRandomOperationInstruction\GetRandomOperationInstruction.xml
 GetRandomOperationStatus\GetRandomOperationStatus.xml
+Get-device-shadow-for-id\Get-device-shadow-for-id.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml
@@ -279,7 +280,9 @@ Regression-Suite\Energy_providers.xml
 Regression-Suite\Rate-Revealer.xml
 Regression-Suite\UnClaim-Appliance.xml
 Regression-Suite\Appliance-Wraper.xml
+Regression-Suite\Get-device-shadow-for-id_old.xml
 Regression-Suite\Get-device-shadow-for-id.xml
+Regression-Suite\Check_DeviceShadow.xml
 Regression-Suite\Authorize-NEST-user.xml
 Regression-Suite\UpdateUserNestPreference.xml
 Regression-Suite\Get-User-Nest-Preference.xml

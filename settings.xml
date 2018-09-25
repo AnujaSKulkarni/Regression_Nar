@@ -335,7 +335,7 @@
     <con:service type="REST" name="Get access token">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
-    <con:service type="REST" name="Get device shadow for id">
+    <con:service type="REST" name="Get device shadow for id_old">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get location by locationId">
@@ -641,6 +641,9 @@
     <con:service type="REST" name="GetRandomOperationStatus">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="Get device shadow for id">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api-test.whrcloud.com/api/v1</con:value>
@@ -651,7 +654,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc4NzU3NjAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI1NWFkMjY4MC1kN2I4LTQ4MWItOTllNi1lNWRhMTg1NGIyMzAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.kTaf4ro3T3698lWkwBKaaBBkWzzVkpmk0Bpoz5c3Q7Q</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc4NzczNTIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxZjgzZTM5OC05YmYwLTQzMzQtOTQ4ZS0yOTMwYmEzMWQyYjgiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.xHW0n0JsFNZltjun4xczjbjrNv0Awk1nU06_-sAN318</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -663,19 +666,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_3/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_3/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTczLCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzEyXzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3ODc1Nzc5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0OGQ1MWI2Yy1mNWU2LTQ4NDAtODA3Zi05MjUxMDcyYWUwY2YiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.aNvivLxttF_UR-Ru041Wz9z2fPhVL41dpER0jHJ4i7M</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTc1LCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzM5XzEzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3ODc3MzU5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0YjYxNWUzNS1kYzMxLTQzMjctOWU3MC1jYjAwODNlNGJmZTUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.1DP_4hnm5zOyLv8ldSO7lhsI8bBwjO7CUCmcgqxWbzY</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTczLCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzEyXzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNDhkNTFiNmMtZjVlNi00ODQwLTgwN2YtOTI1MTA3MmFlMGNmIiwiZXhwIjoxNTM5MTUwMTc5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI1ZWUyMTg0MS1mZGY5LTRhYTctYWE4Yi0xMDQ2ZGI1MDUwNGEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.tza4k-zUCtR8Ko_AbQTjyY-Vh1pkVRU-_8GBNewoXQI</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTc1LCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzM5XzEzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNGI2MTVlMzUtZGMzMS00MzI3LTllNzAtY2IwMDgzZTRiZmU1IiwiZXhwIjoxNTM5MTUxNzU5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIzNWMwMDNhNy0yNTBlLTQyMjUtODJkZi0xYzU2MzQwNjEwNGIiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.Pb39K7zCwKHR8Rj7QKWbR-7tzrxPd55RQKfHSdh1SHE</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -986,7 +989,7 @@
     <con:service type="REST" name="Get access token">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
-    <con:service type="REST" name="Get device shadow for id">
+    <con:service type="REST" name="Get device shadow for id_old">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get location by locationId">
@@ -1291,6 +1294,9 @@
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Get device shadow for id">
+      <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -1637,7 +1643,7 @@
     <con:service type="REST" name="Get access token">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
-    <con:service type="REST" name="Get device shadow for id">
+    <con:service type="REST" name="Get device shadow for id_old">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get location by locationId">
@@ -1941,6 +1947,9 @@
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Get device shadow for id">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>
@@ -2288,7 +2297,7 @@
     <con:service type="REST" name="Get access token">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
-    <con:service type="REST" name="Get device shadow for id">
+    <con:service type="REST" name="Get device shadow for id_old">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get location by locationId">
@@ -2592,6 +2601,9 @@
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Get device shadow for id">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>

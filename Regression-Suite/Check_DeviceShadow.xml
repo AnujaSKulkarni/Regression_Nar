@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4ba87f63-523c-45ae-b5e8-3d2d1f535823" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Check_DeviceShadow" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4ba87f63-523c-45ae-b5e8-3d2d1f535823fileName">Check_DeviceShadow</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="groovy" name="flow control" id="15b6f55c-8e21-4944-976b-8dc001261925">
+    <con:settings/>
+    <con:config>
+      <script>def claim_time = context.expand( '${#[Regression Suite#Appliance Wraper#Appliance Wraper]#Response#$[\'appliance\'][\'updatedAt\']}' )
+log.info(claim_time);
+
+
+
+def device_shadow = context.expand( '${#[Regression Suite#Get device shadow for id#Get device shadow for id]#Response#$[\'lastModified\']}' )
+llog.info(device_shadow);
+
+
+//def date = new Date()
+//date = date.parse('dd/MM/yyyy mm:ss', '03/02/2010 02:00')
+//date = date.parse('yyyy/MM/dd hh:mm:ss','device_shadow')
+//log.info(date);
+//def timestamp = date.time.toString()
+//log.info(timestamp);</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
