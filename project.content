@@ -204,7 +204,6 @@ Regression-Suite\Update-Location.xml
 Regression-Suite\get-location.xml
 Regression-Suite\Get-Location-by-AccountId.xml
 Regression-Suite\Get-Appliance-attributes-from-Device-Shadow.xml
-Regression-Suite\Get-device-shadow-for-id.xml
 Regression-Suite\get-all-appliances-dashDB.xml
 Regression-Suite\Invite-Company.xml
 Regression-Suite\Add-company.xml
@@ -280,6 +279,7 @@ Regression-Suite\Energy_providers.xml
 Regression-Suite\Rate-Revealer.xml
 Regression-Suite\UnClaim-Appliance.xml
 Regression-Suite\Appliance-Wraper.xml
+Regression-Suite\Get-device-shadow-for-id.xml
 Regression-Suite\Authorize-NEST-user.xml
 Regression-Suite\UpdateUserNestPreference.xml
 Regression-Suite\Get-User-Nest-Preference.xml

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="GetRandomOperationStatus" path="/reclaim/random/operations/status/WPR44VB8AKF63" id="a7aec966-17d0-49d9-a69d-f90d93ea67af" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="GetRandomOperationStatus" path="/reclaim/random/operations/status/WPR44VB8AKF63" id="a7aec966-17d0-49d9-a69d-f90d93ea67af" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a7aec966-17d0-49d9-a69d-f90d93ea67affileName">GetRandomOperationStatus</con:setting>
   </con:settings>
@@ -12,14 +12,14 @@
         <con:value/>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter required="true">
         <con:name>Content-Type</con:name>
         <con:value/>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:representation type="REQUEST">
@@ -42,8 +42,10 @@
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>https://{{Appliance}}</con:endpoint>
       <con:request/>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

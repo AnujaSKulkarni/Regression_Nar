@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="GetRandomOperationInstruction" id="5584a680-e65e-4271-b813-7665de3553f2" disabled="true">
+  <con:testStep type="restrequest" name="GetRandomOperationInstruction" id="5584a680-e65e-4271-b813-7665de3553f2">
     <con:settings/>
     <con:config service="GetRandomOperationInstruction" resourcePath="/reclaim/random/operations/WPR44VB8AKF63" methodName="GetRandomOperationInstruction" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="GetRandomOperationInstruction" id="115de577-0f82-4ba4-9bed-59a73bc7cee1" mediaType="application/json">

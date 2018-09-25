@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="2bf63215-ed44-4e80-98b9-59fd1ca952b3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Reclaim Appliance copy" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="2bf63215-ed44-4e80-98b9-59fd1ca952b3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Reclaim Appliance copy" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2bf63215-ed44-4e80-98b9-59fd1ca952b3fileName">Reclaim-Appliance-copy</con:setting>
   </con:settings>
@@ -142,38 +142,6 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get Member Token" id="d8bc3cd9-e187-41d5-b2ca-5ccc50bea8fd">
-    <con:settings/>
-    <con:config service="GET Member Token" methodName="GET Member Token" resourcePath="/oauth/token" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Get Member Token" id="be7c5636-2f2b-47c1-8484-bc26c2d2a6b0" mediaType="application/x-www-form-urlencoded" postQueryString="true">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://oauth/tok</con:endpoint>
-        <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/oauth/token</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="f6114736-8fd8-4eaa-a9f3-57bf1b18770a" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <con:entry key="password" value="Whirlpool123$"/>
-          <con:entry key="grant_type" value="password"/>
-          <con:entry key="client_secret" value="syntel123$"/>
-          <con:entry key="client_id" value="syntel"/>
-          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
-        </con:parameters>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
   <con:testStep type="datasource" name="DataSource" id="2507f026-846d-4dba-b6ad-8bff1d632018">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -302,11 +270,11 @@ if (API_Name != TestCaseName){
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request>{
-        "applianceName": "MHC 76 microwave oven",
-        "said": "WPR44VB8AKF63",
-        "locationId": 3183,
-        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjgxOTAsInVzZXJfbmFtZSI6IldDTE9VRF9BRE1JTl9BQ0NPVU5UX1NPQVBVSUBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImRhYWRjZDU0LTM1ZDctNDEwNy04NTgyLWFhM2FmNTNkMWE3MSIsImV4cCI6MTUzNzQzMDYyOSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX0FETUlOIl0sImp0aSI6Ijk3ZTI3ZTY2LTQzZjItNDc5My05M2YwLTc4YWM0NTZiOGU1ZiIsImNsaWVudF9pZCI6InN5bnRlbCIsIlNBSUQiOlsiV1BSMzMzMzZMVksyQSIsIldQUjMzMzM3TDNMNTUiLCJXUFIzMzMzOFZQUjQ5IiwiV1BSNDRWQjhBS0Y2MyIsIldQUjRFUk42V1dHQzciLCJXUFI0RkhHR0ZETkNCIl19.uGfRAzeKUjr0DT61ap4A7iyxapO0sxzI1-28ov9jsPc"
- }</con:request>
+"applianceName":"${#Project#Appliance Name}",
+"said":"${#Project#Appliance_SAID}",
+"locationId": 3183,
+"refreshToken":"${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['refresh_token']}"
+}</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/reclaim</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="dda54ac6-aa81-43f1-ab78-ddc8392acaa2" name="Valid HTTP Status Codes">
           <con:settings/>
@@ -320,11 +288,11 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="Authorization" value="application/json"/>
+          <con:entry key="Authorization" value="bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}"/>
           <con:entry key="wp-client-country" value="US"/>
           <con:entry key="wp-client-brand" value="Whirlpool"/>
           <con:entry key="wp-client-region" value="NAR"/>
-          <con:entry key="Content-Type" value="Bearer ${#Project#access_token}"/>
+          <con:entry key="Content-Type" value="application/json"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -489,11 +457,6 @@ out.close()</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>2507f026-846d-4dba-b6ad-8bff1d632018</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>d8bc3cd9-e187-41d5-b2ca-5ccc50bea8fd</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
