@@ -254,6 +254,7 @@ Regression-Suite\SetOptOutStatus.xml
 Regression-Suite\GetOptOutStatus.xml
 Regression-Suite\SetggsOptOutStatus.xml
 Regression-Suite\GetggsOptOutStatus.xml
+Regression-Suite\Appliance-Wraper.xml
 Regression-Suite\create-cycle.xml
 Regression-Suite\create-setting.xml
 Regression-Suite\Retrive-Favorites.xml
@@ -279,7 +280,6 @@ Regression-Suite\Logout.xml
 Regression-Suite\Energy_providers.xml
 Regression-Suite\Rate-Revealer.xml
 Regression-Suite\UnClaim-Appliance.xml
-Regression-Suite\Appliance-Wraper.xml
 Regression-Suite\Get-device-shadow-for-id_old.xml
 Regression-Suite\Get-device-shadow-for-id.xml
 Regression-Suite\Check_DeviceShadow.xml

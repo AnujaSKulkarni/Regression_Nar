@@ -307,7 +307,7 @@ From (Select app.appliance_id
         <con:request>[
 {
 "alertId":${JDBC#B_alert_id},
-"applianceId":${#[Regression Suite#Appliance Wraper#Appliance Wraper]#Response#$['appliance']},
+"applianceId":413,
 "notificationType":"PUSH",
 "accountId":${#[Regression Suite#Create Location]#Account_ID},
 "status":"Enable",

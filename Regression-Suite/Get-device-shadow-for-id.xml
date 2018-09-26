@@ -264,7 +264,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Get device shadow for id" id="38ebd5a2-481b-4ae3-8520-b3a4bdd6db3a" disabled="true">
     <con:settings/>
-    <con:config service="Get device shadow for id" resourcePath="/deviceshadow/WPR333334UCD3" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get device shadow for id" resourcePath="/appliance/WPR333334UCD3" methodName="Get device shadow for id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get device shadow for id" id="70219d36-f831-4c42-ada9-d23106fa9994" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

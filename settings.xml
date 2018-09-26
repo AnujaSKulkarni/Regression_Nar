@@ -654,7 +654,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc4NzczNTIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxZjgzZTM5OC05YmYwLTQzMzQtOTQ4ZS0yOTMwYmEzMWQyYjgiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.xHW0n0JsFNZltjun4xczjbjrNv0Awk1nU06_-sAN318</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc5NjI4OTMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI5MzUyMDMxMC1iNzhjLTQ4MjMtYmZmMy05Y2Q1NTQxMGY5OWUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.6de5ftcaIafOiPxOz1C00eXTQkGAVORNtB8hWpGrerk</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -666,19 +666,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_3/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-26/Run_Number_2/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-25/Run_Number_3/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-26/Run_Number_2/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTc1LCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzM5XzEzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3ODc3MzU5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0YjYxNWUzNS1kYzMxLTQzMjctOWU3MC1jYjAwODNlNGJmZTUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.1DP_4hnm5zOyLv8ldSO7lhsI8bBwjO7CUCmcgqxWbzY</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTg2LCJ1c2VyX25hbWUiOiJXRURfU0VQXzI2XzExXzI0XzU0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3OTYyOTAyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIzYTdlYTljZC1jNDkzLTQ5YjYtYjQzZi0zNWYyMjY3YmYwN2YiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.t3y4M0kmXbm2zOq4pXjc1RVZ4_KIQnZDk6iyf6x9OdA</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTc1LCJ1c2VyX25hbWUiOiJUVUVfU0VQXzI1XzExXzM5XzEzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNGI2MTVlMzUtZGMzMS00MzI3LTllNzAtY2IwMDgzZTRiZmU1IiwiZXhwIjoxNTM5MTUxNzU5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIzNWMwMDNhNy0yNTBlLTQyMjUtODJkZi0xYzU2MzQwNjEwNGIiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.Pb39K7zCwKHR8Rj7QKWbR-7tzrxPd55RQKfHSdh1SHE</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NTg2LCJ1c2VyX25hbWUiOiJXRURfU0VQXzI2XzExXzI0XzU0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiM2E3ZWE5Y2QtYzQ5My00OWI2LWI0M2YtMzVmMjI2N2JmMDdmIiwiZXhwIjoxNTM5MjM3MzAyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJhMWMxMTI0Zi02OGViLTQwZmMtYTk4OC1lYmY2ZjI2ZWYxM2MiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.NSnAKbip-jLfSM7wXG-eBj9__wH7uzL3gQ0mxRS8J0U</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -738,7 +738,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance Name</con:name>
-      <con:value>Dryer</con:value>
+      <con:value>Wash</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1296,7 +1296,7 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization">https://{{API-Connect}}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -1308,7 +1308,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value/>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzc5NjIxNDAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIyMWEyOTk3ZC00YThlLTRlOGQtOWQzMi0zMzBhZjZlNGU2MTIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.IEjVUXnS6Utql75ferJTo_h0Lijlib2Y6yNi5ai7UV4</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1320,19 +1320,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-24/Run_Number_2/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-26/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-24/Run_Number_2/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-09-26/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjM0LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzE2XzQyXzExX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3NTQ5OTQwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3N2RjZTRhNS01M2FkLTRmMTgtYjk4Yy1lMDcxNGExMTczNGYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.YRQxHSb8vyt6U-X-MnRp3lJCo0Hwye0Fg92fd_NRL5M</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjU2LCJ1c2VyX25hbWUiOiJXRURfU0VQXzI2XzExXzEyXzIwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM3OTYyMTQ4LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI5NGZlOWU0YS1iNDE3LTQzZTktYmQzYS05OGY0N2MzMmI1NGMiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.mr2owUMYYuYKFqdrAqwD0ty2-01SiKtYuBfZbozLC7M</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjM0LCJ1c2VyX25hbWUiOiJGUklfU0VQXzIxXzE2XzQyXzExX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNzdkY2U0YTUtNTNhZC00ZjE4LWI5OGMtZTA3MTRhMTE3MzRmIiwiZXhwIjoxNTM4ODI0MzQwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyYjMzMzMwMi04OGQ0LTQ4YzUtYTczNS1mMzU0ZmZlYjQ5NWEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.1jxGWOpKSvwbKguW2joRjrjrmLSkJWeIz2BAM903F98</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNjU2LCJ1c2VyX25hbWUiOiJXRURfU0VQXzI2XzExXzEyXzIwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiOTRmZTllNGEtYjQxNy00M2U5LWJkM2EtOThmNDdjMzJiNTRjIiwiZXhwIjoxNTM5MjM2NTQ4LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIxMThlY2FkYS02NDljLTQ4ZDQtODM2NC0wYWYzMTc1MTdmZGYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.SDYiinSJ_XGapeYUfiXmZvimbxuWKUEcSoCCFCCiAeg</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>

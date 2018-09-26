@@ -72,6 +72,7 @@ SetOptOutStatus.xml
 GetOptOutStatus.xml
 SetggsOptOutStatus.xml
 GetggsOptOutStatus.xml
+Appliance-Wraper.xml
 create-cycle.xml
 create-setting.xml
 Retrive-Favorites.xml
@@ -97,7 +98,6 @@ Logout.xml
 Energy_providers.xml
 Rate-Revealer.xml
 UnClaim-Appliance.xml
-Appliance-Wraper.xml
 Get-device-shadow-for-id_old.xml
 Get-device-shadow-for-id.xml
 Check_DeviceShadow.xml
