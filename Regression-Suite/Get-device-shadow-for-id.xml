@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="fa5a8620-e34f-4205-bb43-43f2f8015471" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get device shadow for id" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="fa5a8620-e34f-4205-bb43-43f2f8015471" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get device shadow for id" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="fa5a8620-e34f-4205-bb43-43f2f8015471fileName">Get-device-shadow-for-id</con:setting>
   </con:settings>
