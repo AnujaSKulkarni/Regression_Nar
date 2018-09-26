@@ -252,7 +252,7 @@ out1.close();</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="17bbda2a-7aea-4f2d-8749-bec148c03796">
+  <con:testStep type="groovy" name="Report" id="17bbda2a-7aea-4f2d-8749-bec148c03796" disabled="true">
     <con:settings/>
     <con:config>
       <script>def Final_Path = context.expand( '${#Project#Test_Result_Path}' )

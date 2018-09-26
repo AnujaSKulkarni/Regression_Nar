@@ -258,7 +258,7 @@ Appliance_ID = Appliance_ID.replace("\\", "")
 testRunner.testCase.setPropertyValue("Appliance_ID", Appliance_ID)
 
 
-/*if (API_Name != TestCaseName){
+if (API_Name != TestCaseName){
 	log.info "Skipping"
 	testRunner.testCase.testSteps['Update User Consent'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
@@ -275,7 +275,7 @@ testRunner.testCase.setPropertyValue("Appliance_ID", Appliance_ID)
 		testRunner.testCase.testSteps['Update User Consent'].setDisabled(false)
 		testRunner.testCase.testSteps['Report'].setDisabled(false)
 	}
-}*/</script>
+}</script>
     </con:config>
   </con:testStep>
   <con:testStep type="restrequest" name="Update User Consent" id="298c5c6d-79b4-4f61-b8d9-25a79ae459fc" disabled="true">
