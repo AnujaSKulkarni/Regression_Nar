@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="b764cd61-3335-4427-a8b3-fad5c159ee99" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Create Location" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="b764cd61-3335-4427-a8b3-fad5c159ee99" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Create Location" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5702229f-a04f-4c5a-b3b0-7f4af4c761dcfileName">Create-Location</con:setting>
     <con:setting id="b764cd61-3335-4427-a8b3-fad5c159ee99fileName">Create-Location</con:setting>
@@ -857,11 +857,11 @@ out.close()</script>
       <con:name>Location_ID_Transfer</con:name>
       <con:value>HTTP/1.1 200 undefined
 Server: nginx/1.4.6 (Ubuntu)
-Date: Wed, 26 Sep 2018 09:51:30 GMT
+Date: Thu, 27 Sep 2018 04:46:25 GMT
 Content-Type: application/json
 Connection: keep-alive
 X-Backside-Transport: OK OK
-X-Global-Transaction-ID: 7abfb5425bab56a10a2bdf1d
+X-Global-Transaction-ID: 3516d0305bac60a00c56e1a1
 User-Agent: IBM-APIConnect/201
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
@@ -877,11 +877,11 @@ Expires: 0
 X-Frame-Options: DENY
 Strict-Transport-Security: max-age=15768000
 
-{"LOCATION_ID":7216,"CITY":"New York","ACCOUNT_ID":18590,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":1,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Wed_Sep_26_15_21_26_IST_20188428991","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":"","UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
+{"LOCATION_ID":7219,"CITY":"New York","ACCOUNT_ID":18606,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":1,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Thu_Sep_27_10_16_23_IST_2018480751","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":"","UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>18590</con:value>
+      <con:value>18606</con:value>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
@@ -893,11 +893,11 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Wed_Sep_26_15_21_26_IST_2018</con:value>
+      <con:value>Regression_Location_Thu_Sep_27_10_16_23_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Wed_Sep_26_15_21_31_IST_20183633945"</con:value>
+      <con:value>"Location_Thu_Sep_27_10_16_27_IST_20188310025"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

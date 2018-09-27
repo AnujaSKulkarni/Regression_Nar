@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8975d43a-320d-4e20-910d-f3d13f2b1a41" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="History -Energy" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="8975d43a-320d-4e20-910d-f3d13f2b1a41" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="History -Energy" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8975d43a-320d-4e20-910d-f3d13f2b1a41fileName">History--Energy</con:setting>
   </con:settings>
@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="History -Energy" id="5bd27d9b-cbe8-4fda-a398-a1d321cf427d">
+  <con:testStep type="restrequest" name="History -Energy" id="5bd27d9b-cbe8-4fda-a398-a1d321cf427d" disabled="true">
     <con:settings/>
     <con:config service="History -Energy" resourcePath="/history" methodName="History -Energy" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="History -Energy" id="18d8c3e4-e356-431f-b770-f51ca3f93f75" mediaType="application/json" postQueryString="false">
@@ -300,7 +300,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="4743a0ce-882c-4e0c-b49e-dc522ebb2f06">
+  <con:testStep type="groovy" name="Report" id="4743a0ce-882c-4e0c-b49e-dc522ebb2f06" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
