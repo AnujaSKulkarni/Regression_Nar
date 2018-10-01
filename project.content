@@ -180,6 +180,7 @@ Reclaim-Appliance-copy\Reclaim-Appliance-copy.xml
 GetRandomOperationInstruction\GetRandomOperationInstruction.xml
 GetRandomOperationStatus\GetRandomOperationStatus.xml
 Get-device-shadow-for-id\Get-device-shadow-for-id.xml
+Reclaim_Unclaim\Reclaim_Unclaim.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml

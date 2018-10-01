@@ -644,6 +644,9 @@
     <con:service type="REST" name="Get device shadow for id">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="Reclaim_Unclaim">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api-test.whrcloud.com/api/v1</con:value>
@@ -654,7 +657,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzgwNDUxMjQsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJhY2JkYTQ3Yi03OTRkLTQ2YjUtOTc2ZC01ZTQ4ZDk2NjM0MDkiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.J9CXhC3hcGqprcWe3aBds2Ijgoep21IDwH0avJQxJd8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzgzOTY3OTMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJlMTA3NGM3Yi03MTE0LTRjZTQtODRmOS05ZTQxYmI0M2ZiMTEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.w_4ORIqRXoxeV5M113EMfKqJ_LpQSz95c5jZuOt-d6E</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -666,19 +669,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-27/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-01/Run_Number_3/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-09-27/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-01/Run_Number_3/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjA2LCJ1c2VyX25hbWUiOiJUSFVfU0VQXzI3XzEwXzE1XzI2X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4MDQ1MTQyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIzY2E5ZDE2ZS0zZjRjLTQ5ZTgtOTRmNS1iN2M3NTg3ZGVjMzgiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.FWzAlFtujScq4aVvsIRMFW9JfOEavDxm6y6QxHrceDc</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjI1LCJ1c2VyX25hbWUiOiJNT05fT0NUXzAxXzExXzU2XzM2X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4Mzk2ODA4LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3MGViNmYyZS1kMGU0LTQyMzYtOTNjYS05NjNmZDViNDg2YzUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.8gvITQE-_VKTkKaWCrW2_xlE31XS2ftgu61c6HAq7jc</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjA2LCJ1c2VyX25hbWUiOiJUSFVfU0VQXzI3XzEwXzE1XzI2X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiM2NhOWQxNmUtM2Y0Yy00OWU4LTk0ZjUtYjdjNzU4N2RlYzM4IiwiZXhwIjoxNTM5MzE5NTQyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIwM2JhNDYyNy0wMWI3LTRjODQtODhjZi1lZGE0YzkxMTgxNzEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.-1D2ooss8kDp3gtvnXoFTihkNNu-LKQOtE19v9lJcVM</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjI1LCJ1c2VyX25hbWUiOiJNT05fT0NUXzAxXzExXzU2XzM2X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNzBlYjZmMmUtZDBlNC00MjM2LTkzY2EtOTYzZmQ1YjQ4NmM1IiwiZXhwIjoxNTM5NjcxMjA4LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIzNDdkZWU1MS1kYzRhLTRlZjItODRkNy03MjE5M2JlZmNiZDEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.8W0mrKVXgC4HHkPULUlRaFSfubFxPIsP8isnwySfm9g</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -1287,7 +1290,7 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Reclaim Appliance copy">
-      <con:endpoint authProfile="No Authorization">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GetRandomOperationInstruction">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
@@ -1296,7 +1299,10 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="Reclaim_Unclaim">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -1952,6 +1958,9 @@
     <con:service type="REST" name="Get device shadow for id">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
+    <con:service type="REST" name="Reclaim_Unclaim">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api-test.whrcloud.com/api/v1</con:value>
@@ -2604,6 +2613,9 @@
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Reclaim_Unclaim">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>

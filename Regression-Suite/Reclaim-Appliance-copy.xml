@@ -304,6 +304,60 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
+  <con:testStep type="groovy" name="flow control_new" id="82c8fb2f-b8e5-41a4-9377-106016de075d">
+    <con:settings/>
+    <con:config>
+      <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
+def API_Name = context.expand( '${DataSource#API_Name}' )
+def TestCaseName = testRunner.testCase.getName()
+
+
+if (API_Name != TestCaseName){
+	testRunner.testCase.testSteps['Reclaim_Unclaim'].setDisabled(true)
+	testRunner.testCase.testSteps['Report'].setDisabled(true)
+}else{
+	testRunner.testCase.testSteps['Reclaim_Unclaim'].setDisabled(false)
+	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
+}</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Reclaim_Unclaim" id="df744ed1-9a2b-4d78-9b9e-f1d0b61221f7" disabled="true">
+    <con:settings/>
+    <con:config service="Reclaim_Unclaim" resourcePath="/appliances/unclaim/WPR44VB8AKF63" methodName="Reclaim_Unclaim" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Reclaim_Unclaim" id="20826b7f-fe1e-41eb-ae71-e9edfb0a4613" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api-test.whrcloud.com/api/v1/api/v1/appliances/unclaim/WPR44VB8AKF63</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="867f7b3b-2ef4-4372-bbdb-e1ca3670e09a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Authorization" value="bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}"/>
+          <con:entry key="wp-client-country" value="US"/>
+          <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <con:entry key="wp-client-region" value="NAR"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-region</con:entry>
+          <con:entry>wp-client-country</con:entry>
+          <con:entry>wp-client-brand</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
   <con:testStep type="groovy" name="Report" id="bb885e61-f6aa-4d55-901a-ca862585eb00" disabled="true">
     <con:settings/>
     <con:config>
@@ -457,6 +511,16 @@ out.close()</script>
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>2507f026-846d-4dba-b6ad-8bff1d632018</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>df744ed1-9a2b-4d78-9b9e-f1d0b61221f7</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>82c8fb2f-b8e5-41a4-9377-106016de075d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

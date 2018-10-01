@@ -181,5 +181,3 @@ GetRandomOperationInstruction
 GetRandomOperationStatus
 Get-device-shadow-for-id
 Reclaim_Unclaim
-Regression-Suite
-REST-Virt-1
