@@ -271,15 +271,15 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request>{
 
-  "applianceId":"${#Project#Appliance_SAID}",
+  "said":"WPR4H893RCE9D",
 
-  "groupBy":${DataSource#Group By},
+  "groupBy":"${DataSource#Group By}",
 
-  "attributeNames":${DataSource#Attribute_Name},
+  "attributes":"${DataSource#Attribute_Name}",
 
-  "startTime":"1533580200000",
+  "start":"1533580200000",
 
-  "endTime":"1533666599000",
+  "end":"1533666599000",
 
   "maxRows":"5"
 

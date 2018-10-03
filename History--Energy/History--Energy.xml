@@ -38,6 +38,12 @@
       <con:params/>
       <con:element xmlns:his="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/wcloud-m2m-qa/api/v1/history">his:Response</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>407</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
     <con:request name="History -Energy" id="18d8c3e4-e356-431f-b770-f51ca3f93f75" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

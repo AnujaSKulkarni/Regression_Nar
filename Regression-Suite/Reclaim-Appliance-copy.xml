@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Reclaim Appliance copy" id="1eb22ff5-5d33-4064-b830-1b951d009581">
+  <con:testStep type="restrequest" name="Reclaim Appliance copy" id="1eb22ff5-5d33-4064-b830-1b951d009581" disabled="true">
     <con:settings/>
     <con:config service="Reclaim Appliance copy" resourcePath="/appliances/reclaim" methodName="Reclaim Appliance copy" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Reclaim Appliance copy" id="90fddf9e-594a-43b3-8bac-392c84752d23" mediaType="application/json" postQueryString="false">
@@ -270,11 +270,11 @@ if (API_Name != TestCaseName){
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request>{
-"applianceName":"Wash",
-"said":"WPR44VB8AKF63",
-"locationId": 3183,
-"refreshToken":"${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['refresh_token']}"
-}</con:request>
+        "applianceName":"${#Project#Appliance Name}",
+        "said": "WPR44VB8AKF63",
+        "locationId": ${#Project#Location_reclaim},
+        "refreshToken":"${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['refresh_token']}"
+ }</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/reclaim</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="dda54ac6-aa81-43f1-ab78-ddc8392acaa2" name="Valid HTTP Status Codes">
           <con:settings/>
@@ -358,7 +358,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="bb885e61-f6aa-4d55-901a-ca862585eb00">
+  <con:testStep type="groovy" name="Report" id="bb885e61-f6aa-4d55-901a-ca862585eb00" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

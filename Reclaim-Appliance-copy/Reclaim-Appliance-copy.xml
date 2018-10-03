@@ -55,7 +55,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>400 401 500</con:status>
+      <con:status>400 401 500 405</con:status>
       <con:params/>
       <con:element xmlns:rec="https://api-test.whrcloud.com/api/v1/appliances/reclaim">rec:Fault</con:element>
     </con:representation>
