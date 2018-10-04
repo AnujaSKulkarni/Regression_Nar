@@ -277,7 +277,7 @@ if (API_Name != TestCaseName){
           <driver>com.ibm.db2.jcc.DB2Driver</driver>
           <connstr>jdbc:db2://dashdb-txn-small-yp-dal09-117.services.dal.bluemix.net:50000/BLUDB:user=mohitbh;password=PASS_VALUE;</connstr>
           <pass>Syntel@mb5027676</pass>
-          <Connection>QA( QA )</Connection>
+          <Connection>QA( Stage )</Connection>
           <query>Select A.appliance_id as A_appliance_id, B.alert_id as B_alert_id
 From (Select app.appliance_id
     From BLUADMIN.appliance app
@@ -306,8 +306,8 @@ From (Select app.appliance_id
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>[
 {
-"alertId":${JDBC#B_alert_id},
-"applianceId":413,
+"alertId":43,
+"applianceId":505,
 "notificationType":"PUSH",
 "accountId":${#[Regression Suite#Create Location]#Account_ID},
 "status":"Enable",
@@ -327,7 +327,7 @@ From (Select app.appliance_id
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="Bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>

@@ -271,8 +271,8 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request>{
 "said":"${#Project#Appliance_SAID}",
-"groupBy":"${DataSource#Group By}",
-"attributes":"${DataSource#Attribute_Name}",
+"groupBy":${DataSource#Group By},
+"attributes":${DataSource#Attribute_Name},
 "start":"1533580200000",
   "end":"1533666599000",
   "maxRows":"5"

@@ -663,7 +663,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg1ODM0NzMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJlZGVjMjg5MS1hNWNlLTRiMmQtYTVjOS1lMWNkYmMxNDM3ZGIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.OqCNFiHvNYZ2C-DKrfWvAGmHLXGaO_tQRVlKE6QomN8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg2NjkyMTcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJkMTMxNGU1YS00MzUyLTRiMTMtOWUxZi0wZDkzMmM4NWY2YTAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.XLu9UEKr9yEA6gJkczwHAO7ZU526c2OglhDXGT_v5Yk</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -675,19 +675,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-03/Run_Number_5/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-04/Run_Number_12/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-03/Run_Number_5/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-04/Run_Number_12/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjQwLCJ1c2VyX25hbWUiOiJXRURfT0NUXzAzXzE1XzQ3XzUzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4NTgzNDc5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0N2UxZGFiNi1jMDBhLTRiMWQtYTM4Yi1kOWYwZmVkN2U2OTEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.Yjz8SQV5viw4bOqTfSLT74FKaXhD0yx-kWQ-k-B-wr4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjUwLCJ1c2VyX25hbWUiOiJUSFVfT0NUXzA0XzE1XzM2XzU4X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4NjY5MjI1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI5MmY2YWEzOC1iODVjLTQxYzYtYWMxYS1mYjgwZjczZjdkZjciLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.A1sQ49Ys72bVCpSWVr6d197yscBy53KrgwdnqT3ppKU</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjQwLCJ1c2VyX25hbWUiOiJXRURfT0NUXzAzXzE1XzQ3XzUzX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNDdlMWRhYjYtYzAwYS00YjFkLWEzOGItZDlmMGZlZDdlNjkxIiwiZXhwIjoxNTM5ODU3ODc5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJkOGMxN2YzMS1lYTEzLTQ1NzQtOTkwMS04MzU4NjBmMDNjNzMiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.7TwQCumdedxS8AZD1W3Dz_yGiSqPD3g8QDfyif_kSQ4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjUwLCJ1c2VyX25hbWUiOiJUSFVfT0NUXzA0XzE1XzM2XzU4X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiOTJmNmFhMzgtYjg1Yy00MWM2LWFjMWEtZmI4MGY3M2Y3ZGY3IiwiZXhwIjoxNTM5OTQzNjI1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI5NDFlZDQwMS1jOWRiLTRjNTItYWNiMy1kNWJhMDY4NmNhZGMiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.xw6-jP4r88V7QLun-mlnqaI-PIDilVpcSoupH6a2m5A</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -743,7 +743,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance_id</con:name>
-      <con:value/>
+      <con:value>254</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance Name</con:name>
@@ -1328,7 +1328,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg1Njc4NDYsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIzMDc0NjBkZS1kMjYyLTQ2ZmUtYWZjNy1mNTgxZDIwYmM4ODAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.gOcJn8yE0Ah20wSLgNQLEEfpo7XJJnkWcqdFsUMLxWo</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg2NjgwNzcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI4YjQ0YzI4My04MWJiLTRkZTItOTIxOC0wODRmZjgwN2FmNzIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.n_WlVDuDd7GRT8ihipDLIdfnH3pCv65hg1_wSb4fAD0</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1340,19 +1340,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-03/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-04/Run_Number_10/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-03/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-04/Run_Number_10/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNzE1LCJ1c2VyX25hbWUiOiJXRURfT0NUXzAzXzExXzI3XzI3X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4NTY3ODUzLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJkYzkyZmIyZC1lNDRjLTQ0ZjQtODNhOS1jNzNkZDYzMTUxMzIiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.a9qQZx1QOHVWYfqtYxQdnnuVWggKcjqZOXP5veIQBc0</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNzQwLCJ1c2VyX25hbWUiOiJUSFVfT0NUXzA0XzE1XzE3XzU3X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4NjY4MDgyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI2MzM4MzFiZS1lMDdhLTQ2YjktOGM1ZS0zNzZjODc3NTVjZDMiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.AaXEbzcQgzwqnCnqszscbd5QmdtN8Ohod8bZu5ky76w</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNzE1LCJ1c2VyX25hbWUiOiJXRURfT0NUXzAzXzExXzI3XzI3X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiZGM5MmZiMmQtZTQ0Yy00NGY0LTgzYTktYzczZGQ2MzE1MTMyIiwiZXhwIjoxNTM5ODQyMjUzLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI2NmYxYjcwMC03MjJkLTRjNWEtOGQ0ZS05ZDA2YWMwYWQwNTAiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.f9k1DgIlYJ_EcsrTgo9w8bj-rtirhEf4qLz3MvRnDAU</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNzQwLCJ1c2VyX25hbWUiOiJUSFVfT0NUXzA0XzE1XzE3XzU3X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNjMzODMxYmUtZTA3YS00NmI5LThjNWUtMzc2Yzg3NzU1Y2QzIiwiZXhwIjoxNTM5OTQyNDgyLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJjYTY0MTNhZi0yMzM3LTRhZDUtOWMzZC1hZWExMzM2NTAyNDAiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.PFsUHKhaeaZv22AvMXh7LZUvQMugYVKZhZd345P6xsc</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -1412,7 +1412,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance Name</con:name>
-      <con:value>43</con:value>
+      <con:value>Wash</con:value>
     </con:property>
     <con:property>
       <con:name>Location_reclaim</con:name>

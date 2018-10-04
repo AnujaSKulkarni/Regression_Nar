@@ -273,9 +273,9 @@ if (API_Name != TestCaseName){
 
   "said":"WPR4H893RCE9D",
 
-  "groupBy":"${DataSource#Group By}",
+  "groupBy":${DataSource#Group By},
 
-  "attributes":"${DataSource#Attribute_Name}",
+  "attributes":${DataSource#Attribute_Name},
 
   "start":"1533580200000",
 

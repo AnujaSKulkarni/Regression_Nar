@@ -271,8 +271,8 @@ if (API_Name != TestCaseName){
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request>{
-  "applianceName":"WASHER",
-"applianceId":254
+  "applianceName":"microwave",
+"applianceId":${#Project#Appliance_id}
   
 }</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/updateAppliances</con:originalUri>
