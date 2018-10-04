@@ -21,7 +21,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404 409</con:status>
+      <con:status>404 409 401</con:status>
       <con:params/>
       <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/manageRecipe/WPR4BCKC4R37C">wpr:Fault</con:element>
     </con:representation>
