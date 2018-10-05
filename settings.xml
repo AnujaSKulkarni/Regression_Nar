@@ -90,9 +90,6 @@
       <con:name>SAID_history</con:name>
     </con:property>
     <con:property>
-      <con:name>appliance_Id</con:name>
-    </con:property>
-    <con:property>
       <con:name>Alert</con:name>
     </con:property>
   </con:properties>
