@@ -267,7 +267,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="JDBC" id="0170b6a7-2ec6-47d0-8277-0e3e8dd2137b">
+  <con:testStep type="datasource" name="JDBC" id="0170b6a7-2ec6-47d0-8277-0e3e8dd2137b" disabled="true">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -296,7 +296,7 @@ From (Select app.appliance_id
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="multi subscribe for opt  in and out" id="2c9c4a1a-da28-440b-a690-65bd06aa5da5">
+  <con:testStep type="restrequest" name="multi subscribe for opt  in and out" id="2c9c4a1a-da28-440b-a690-65bd06aa5da5" disabled="true">
     <con:settings/>
     <con:config service="multi subscribe for opt  in and out" resourcePath="/notifications/subscriptions/multi" methodName="multi subscribe for opt  in and out" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="multi subscribe for opt  in and out" id="941c0ead-0aa8-40a0-bc30-96b0fdfbf90b" mediaType="application/json" postQueryString="false">
@@ -367,7 +367,7 @@ From (Select app.appliance_id
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="23ffcf62-1683-4919-9631-25ba72e68460">
+  <con:testStep type="groovy" name="Report" id="23ffcf62-1683-4919-9631-25ba72e68460" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

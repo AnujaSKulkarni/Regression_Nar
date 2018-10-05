@@ -34,7 +34,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 404</con:status>
       <con:params/>
       <con:element xmlns:wpr="https://api-test.whrcloud.com/api/v1/reclaim/random/operations/status/WPR44VB8AKF63">wpr:Fault</con:element>
     </con:representation>
