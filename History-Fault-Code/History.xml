@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="History" path="/history" id="5070d980-b287-417d-935a-0ae1ddee013e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="History" path="/history/faultCode" id="5070d980-b287-417d-935a-0ae1ddee013e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5070d980-b287-417d-935a-0ae1ddee013efileName">History</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4aa51085-2bb5-455f-b777-6ab5a074c922" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetRandomOperationStatus" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="4aa51085-2bb5-455f-b777-6ab5a074c922" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetRandomOperationStatus" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4aa51085-2bb5-455f-b777-6ab5a074c922fileName">GetRandomOperationStatus</con:setting>
   </con:settings>
@@ -283,7 +283,7 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="Authorization" value="bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}"/>
+          <con:entry key="Authorization" value="Bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}"/>
           <con:entry key="Content-Type" value="application/json"/>
         </con:parameters>
         <con:parameterOrder>
