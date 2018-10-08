@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Pre-Prod" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
@@ -669,7 +669,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg3NTY4OTEsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIzNmFiMTA5ZC0wODFkLTQwYTktYTI2Zi1mZTM4YjU4YzM4YzgiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.EG5T3nZ10tMeP-SCKWaMBzLVNq00Q9LctwU5D2Itmx8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg5OTM3NjIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwYzc1YjI2NS0xYzljLTQ2NGUtODMwZi04OTQ2ODFlNjYzOTciLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.6AhHO6V2HmkN491qfAFDoVYTnr7LNBz1NdtogsasinI</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -681,19 +681,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-05/Run_Number_16/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-08/Run_Number_3/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-05/Run_Number_16/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-08/Run_Number_3/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjY4LCJ1c2VyX25hbWUiOiJGUklfT0NUXzA1XzE1XzU4XzEyX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4NzU2ODk5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyOTRkMDIyNC02MWMwLTRlYzItYWZkZS03YTllOTc3YTJjZGUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.t7GC2ewunLDXZLFdAG7XUw2ncvxQzbM9XDPYPtPTzkc</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjcyLCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzA5XzQ5XzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4OTkzOTk3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJlZDBlZWUyYy0wYjQzLTQ0NzMtYjJmZi03ZmFjMTg0ZmM5ZDkiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.mfiudurrr7iZeM7yZxbBY7GA4UDklXv5X6oWJYowJAI</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjY4LCJ1c2VyX25hbWUiOiJGUklfT0NUXzA1XzE1XzU4XzEyX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiMjk0ZDAyMjQtNjFjMC00ZWMyLWFmZGUtN2E5ZTk3N2EyY2RlIiwiZXhwIjoxNTQwMDMxMjk5LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI3OGNmOTA5OS0zOWRmLTQ4NGUtOGIwYy0wYWQxMzk4ZTdjNWQiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.eb9ReL-moFXrFiNVCmhvLSVewjsJQVthpojzZ1JKD0Q</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjcyLCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzA5XzQ5XzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiZWQwZWVlMmMtMGI0My00NDczLWIyZmYtN2ZhYzE4NGZjOWQ5IiwiZXhwIjoxNTQwMjY4Mzk3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJmNGRjMTJjMS0zMDMyLTQxYjAtYTdlYy1hNmMzMmRjNGJlNDYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.SAKKzaGiygLo4tsi6aCzI-rMyZebAPT2BBlBVlIQMQg</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -1993,29 +1993,29 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History -Energy">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="History-Fault Code">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Reclaim Appliance copy">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationInstruction">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Reclaim_Unclaim">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://api-test.whrcloud.com/api/v1</con:value>
+      <con:value>https://api-pre-prod.whrcloud.com/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
@@ -2023,7 +2023,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzE4NTc1MzYsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJiZmY2MGUxNy1kNTg0LTQ5N2EtYmE0NS0zMGYzMTljNzliMzIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.HBEUqvZeka9eoARJk9cDmBfB3IJVZNusCP_I75QR6uk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkwMTkzNDUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwNzBhZjkxOC05Mjg4LTRjYzYtYTMzNC02ZDdlMmVmOTVhNWUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.EPtGIPQSfbmFPklncCN4VBedmud15r4HICT9MbbPJ74</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -2035,19 +2035,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/NAR/QA/2018-07-17/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_4/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/NAR/QA/2018-07-17/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_4/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4MzA1LCJ1c2VyX25hbWUiOiJUVUVfSlVMXzE3XzE5XzI5XzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTMxODU3NTUwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyMDU3MzdhZi0zNjE0LTRlYTUtYTlhYS0yZTVmMmFmMGVkMTYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.NctfZk1NutFrdlbL3kAS53KQMOmbCeSSSWR49MTEIzg</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njc0LCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzE2XzU2XzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MDE5NjMwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI1MWZmODJjNy1kOThmLTRlNDMtYTMyNy00OGU3ODgwZmYwZmQiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.U8UAoJLGt0KBf6cm2cR-oAIU-egO--J7i1k5w3rp97U</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4MzA1LCJ1c2VyX25hbWUiOiJUVUVfSlVMXzE3XzE5XzI5XzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiMjA1NzM3YWYtMzYxNC00ZWE1LWE5YWEtMmU1ZjJhZjBlZDE2IiwiZXhwIjoxNTMzMTMxOTUwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI1ZmE2ZjY5YS1iZTdmLTQxYmYtODY1Mi0zYWVhNzM3YjIyNjciLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.ISbdTmWbTCy-zqXGE1Ak0Ui_4O1ZGAzCkS-rLEzCl-8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njc0LCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzE2XzU2XzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNTFmZjgyYzctZDk4Zi00ZTQzLWEzMjctNDhlNzg4MGZmMGZkIiwiZXhwIjoxNTQwMjk0MDMwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyMTlmYWJlNy0xNGY5LTQ3NTMtYmE4Mi1jNjNiMmFhMTkyYjQiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.sdcqjNeYcOYbS2ls20ISB9IAH3gAvATHlZ77FiGrZq0</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -2063,7 +2063,7 @@
     </con:property>
     <con:property>
       <con:name>ADRS</con:name>
-      <con:value>https://amazonreplenishmentserviceqa-v2.kube-cluster-residen.us-south.containers.mybluemix.net</con:value>
+      <con:value>https://amazonreplenishmentservice.wcloud-pre-prod.us-south.containers.mybluemix.net</con:value>
     </con:property>
     <con:property>
       <con:name>LWA_Client_ID</con:name>
@@ -2091,7 +2091,7 @@
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value>723</con:value>
+      <con:value>32801</con:value>
     </con:property>
     <con:property>
       <con:name>UPC_Sheet</con:name>
@@ -2670,25 +2670,25 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History -Energy">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="History-Fault Code">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Reclaim Appliance copy">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationInstruction">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Reclaim_Unclaim">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>

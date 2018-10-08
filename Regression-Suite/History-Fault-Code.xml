@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077" disabled="true">
+  <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077">
     <con:settings/>
     <con:config service="History-Fault Code" resourcePath="/history/faultCode" methodName="History-Fault Code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="History-Fault Code" id="0bd62b80-7381-4970-ac83-ddb4cc02e038" mediaType="application/json" postQueryString="false">
@@ -306,7 +306,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="160a2050-733d-4789-94cd-4b2da3b4e0d0" disabled="true">
+  <con:testStep type="groovy" name="Report" id="160a2050-733d-4789-94cd-4b2da3b4e0d0">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

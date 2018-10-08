@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="History -Energy" id="5bd27d9b-cbe8-4fda-a398-a1d321cf427d" disabled="true">
+  <con:testStep type="restrequest" name="History -Energy" id="5bd27d9b-cbe8-4fda-a398-a1d321cf427d">
     <con:settings/>
     <con:config service="History -Energy" resourcePath="/history" methodName="History -Energy" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="History -Energy" id="18d8c3e4-e356-431f-b770-f51ca3f93f75" mediaType="application/json" postQueryString="false">
@@ -300,7 +300,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="4743a0ce-882c-4e0c-b49e-dc522ebb2f06" disabled="true">
+  <con:testStep type="groovy" name="Report" id="4743a0ce-882c-4e0c-b49e-dc522ebb2f06">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
