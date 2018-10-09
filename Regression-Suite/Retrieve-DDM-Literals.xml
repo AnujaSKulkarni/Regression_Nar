@@ -263,7 +263,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Retrieve DDM Literals" id="dca298fd-b99d-47c0-a13c-7dbbc57e0511" disabled="true">
+  <con:testStep type="restrequest" name="Retrieve DDM Literals" id="dca298fd-b99d-47c0-a13c-7dbbc57e0511">
     <con:settings/>
     <con:config service="Retrieve DDM Literals" resourcePath="/contents/ddmLiterals/DDM_Washer_SmartGrid_V1" methodName="Retrieve DDM Literals" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Retrieve DDM Literals" id="23eab518-4b20-4861-9fa8-bbedf8f89ee8" mediaType="application/json" postQueryString="false">
@@ -323,7 +323,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="e892e7bc-0e39-4646-b342-b00ecdbe7636" disabled="true">
+  <con:testStep type="groovy" name="Report" id="e892e7bc-0e39-4646-b342-b00ecdbe7636">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

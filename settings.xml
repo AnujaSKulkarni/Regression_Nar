@@ -1993,25 +1993,25 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History -Energy">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="History-Fault Code">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Reclaim Appliance copy">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GetRandomOperationInstruction">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GetRandomOperationStatus">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Reclaim_Unclaim">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -2019,11 +2019,11 @@
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
-      <con:value>https://api-test.whrcloud.com/</con:value>
+      <con:value>https://api-pre-prod.whrcloud.com/</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkwMTkzNDUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwNzBhZjkxOC05Mjg4LTRjYzYtYTMzNC02ZDdlMmVmOTVhNWUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.EPtGIPQSfbmFPklncCN4VBedmud15r4HICT9MbbPJ74</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkwMjExNzYsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI5ODMzMGFhNS0yOTBlLTQ1NzUtYjMxMy0xM2I4M2Q3NmVmZmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.13GuQtImyTmTqbSu9p1nWmPaMT8cUp-6HnP05K_dVr4</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -2035,19 +2035,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_4/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_5/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_4/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Pre-Prod/2018-10-08/Run_Number_5/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njc0LCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzE2XzU2XzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MDE5NjMwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI1MWZmODJjNy1kOThmLTRlNDMtYTMyNy00OGU3ODgwZmYwZmQiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.U8UAoJLGt0KBf6cm2cR-oAIU-egO--J7i1k5w3rp97U</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njc0LCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzE2XzU2XzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiNTFmZjgyYzctZDk4Zi00ZTQzLWEzMjctNDhlNzg4MGZmMGZkIiwiZXhwIjoxNTQwMjk0MDMwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyMTlmYWJlNy0xNGY5LTQ3NTMtYmE4Mi1jNjNiMmFhMTkyYjQiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.sdcqjNeYcOYbS2ls20ISB9IAH3gAvATHlZ77FiGrZq0</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -2692,7 +2692,7 @@
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://api-test.whrcloud.com/api/v1</con:value>
+      <con:value>https://</con:value>
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>

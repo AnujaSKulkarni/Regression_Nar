@@ -344,7 +344,7 @@ def LocationName = "\"" + "Location_" + date + RandomNumber +  "\""
 testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="JDBC" id="f5e6cf49-8fe7-4814-91bf-a11372b64b8a" disabled="true">
+  <con:testStep type="datasource" name="JDBC" id="f5e6cf49-8fe7-4814-91bf-a11372b64b8a">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -374,7 +374,7 @@ Where upper(st.STATE_NAME) = upper(${#TestCase#State_Name})</query>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="326390d8-099e-4f84-9997-df109a89ef21" disabled="true">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="326390d8-099e-4f84-9997-df109a89ef21">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -403,7 +403,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Location_Positive" id="5829050c-6546-4689-bdf8-910e3facfc31" disabled="true">
+  <con:testStep type="restrequest" name="Create Location_Positive" id="5829050c-6546-4689-bdf8-910e3facfc31">
     <con:settings/>
     <con:config service="Create Location" resourcePath="/client_auth/location" methodName="Create Location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Location_Positive" id="6160fb0a-7b6c-4952-b026-d37159474bbd" mediaType="application/json" postQueryString="false">
@@ -625,7 +625,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="707caba8-eee1-4322-b637-c57d9804ff05" disabled="true">
+  <con:testStep type="groovy" name="Report" id="707caba8-eee1-4322-b637-c57d9804ff05">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -761,7 +761,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="0c4a7196-8958-4ebe-8575-85ba3d142f3a" disabled="true">
+  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="0c4a7196-8958-4ebe-8575-85ba3d142f3a">
     <con:settings/>
     <con:config>
       <script>/*Get Test Case Name and Status*/
@@ -791,7 +791,7 @@ if(Status_Code.contains("200")){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="74e9c269-ec8f-4bc5-97bb-ccbb87971ecd" disabled="true">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="74e9c269-ec8f-4bc5-97bb-ccbb87971ecd">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -881,11 +881,11 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>18674</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
-      <con:value/>
+      <con:value>'New York'</con:value>
     </con:property>
     <con:property>
       <con:name>COUNTRY_CODE</con:name>
@@ -893,11 +893,11 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Mon_Oct_08_16_57_53_IST_2018</con:value>
+      <con:value>Regression_Location_Mon_Oct_08_17_23_28_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Mon_Oct_08_16_57_57_IST_20188168520"</con:value>
+      <con:value>"Location_Mon_Oct_08_17_23_28_IST_20183708189"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
