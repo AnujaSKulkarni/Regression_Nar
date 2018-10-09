@@ -2700,7 +2700,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MjY2NzE2NDAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI4MTRmYzFhNC03ZGNlLTQ3YTYtYjg4MS01YzY3YTkzNjllNGEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.1pGfgKi3yba24dKstDYopdD5ELklAVcMnWWUe2C8MoY</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkwNzk0MDUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI1YTJjODI1YS0yZTZiLTRiNWUtYWNkNi1iYmZjOGZjNjZhMWIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.GQciItEOirG9OlCSlf5RxyJ6hioEk3j37AsGQMAWtUc</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -2712,19 +2712,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/NAR/QA/2018-05-18/Run_Number_2/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/NAR/QA/2018-05-18/Run_Number_2/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNTg3LCJ1c2VyX25hbWUiOiJNT05fTUFZXzE0XzE2XzIzXzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTI2MzE2Nzg2LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIwODUxMTUxNy0wODkyLTRhNzctOWY0MC05M2Q0YTNhZWE4ZmMiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.j-9bQkwLpr_c-233Rs-oEBXQdrFUszVzOrYU1AQQ7bY</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjEzNTg3LCJ1c2VyX25hbWUiOiJNT05fTUFZXzE0XzE2XzIzXzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiMDg1MTE1MTctMDg5Mi00YTc3LTlmNDAtOTNkNGEzYWVhOGZjIiwiZXhwIjoxNTI3NTkxMTg2LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0ZjUzYjI4Yi00OGY3LTQ0NjgtYjFiZS02NDExOTY0Mjk2MTUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.06DBl4dD06MNO7gf84SIKn5vJRjLHf2DGhrByHkWhzs</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -2740,7 +2740,7 @@
     </con:property>
     <con:property>
       <con:name>ADRS</con:name>
-      <con:value>https://amazonreplenishmentserviceqa-v2.kube-cluster-residen.us-south.containers.mybluemix.net</con:value>
+      <con:value>https://amazonreplenishmentservice.wcloud.us-south.containers.mybluemix.net</con:value>
     </con:property>
     <con:property>
       <con:name>LWA_Client_ID</con:name>
@@ -2776,7 +2776,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance_SAID</con:name>
-      <con:value>WPR333334UCD3</con:value>
+      <con:value>WPR333334TUG2</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance_id</con:name>

@@ -362,10 +362,6 @@ def brand = context.expand( '${DataSource#Brand}' )</script>
   "validateMobile": true,
   "userRole":${DataSource#User_Role},
   "enabled":1,
-  "email1":"emea_mail@mailinator.COM",
-  "logonId":"emea_mail@mailinator.COM",
-  "logonPassword":"Whirlpool123$",
-  "logonPasswordVerify":"Whirlpool123$",
   "alternateEmail":"abc@mailforspam.com",
   "languageCode":${DataSource#languageCode}
 }</con:request>
@@ -444,9 +440,6 @@ def brand = context.expand( '${DataSource#Brand}' )</script>
         <con:jmsPropertyConfig/>
         <con:parameters>
           <con:entry key="Authorization" value="Bearer ${#Project#Client_Token}"/>
-          <con:entry key="wp-client-country" value="${#TestCase#Country_Name}"/>
-          <con:entry key="wp-client-brand" value="${#TestCase#Brand_Name}"/>
-          <con:entry key="wp-client-region" value="${#TestCase#Region}"/>
           <con:entry key="Content-Type" value="application/json"/>
         </con:parameters>
         <con:parameterOrder>
