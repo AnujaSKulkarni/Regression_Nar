@@ -263,7 +263,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Command and Control - Set Attribute(s)" id="099171b2-b3ba-491c-940a-6b6589a8778f">
+  <con:testStep type="restrequest" name="Command and Control - Set Attribute(s)" id="099171b2-b3ba-491c-940a-6b6589a8778f" disabled="true">
     <con:settings/>
     <con:config service="Command and Control - Set Attribute(s)" resourcePath="/appliance/command" methodName="Command and Control - Set Attribute(s)" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Command and Control - Set Attribute(s)" id="21f0d580-813c-40ca-8714-9d6185a24b32" mediaType="application/json" postQueryString="false">
@@ -358,7 +358,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="4cbb4582-ed64-47bf-a9db-f30ffe5dde4a">
+  <con:testStep type="groovy" name="Report" id="4cbb4582-ed64-47bf-a9db-f30ffe5dde4a" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

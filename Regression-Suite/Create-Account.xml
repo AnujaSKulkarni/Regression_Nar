@@ -439,8 +439,7 @@ def brand = context.expand( '${DataSource#Brand}' )</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${#Project#Client_Token}"/>
-          <con:entry key="Content-Type" value="application/json"/>
+          <entry key="Authorization" value="Bearer ${#Project#Client_Token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>

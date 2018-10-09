@@ -334,7 +334,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Account Phone Number confirmation_Positive" id="92263705-3098-4ce9-b5d3-f40e05b9cf35">
+  <con:testStep type="restrequest" name="Account Phone Number confirmation_Positive" id="92263705-3098-4ce9-b5d3-f40e05b9cf35" disabled="true">
     <con:settings/>
     <con:config service="Account Phone Number confirmation" resourcePath="/accounts/confirm_phone/${#TestCase#Account_ID}/${#TestCase#Verification_Code}" methodName="Account Phone Number confirmation" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Account Phone Number confirmation_Positive" id="8a3f64c1-3406-4942-acb9-69c0144db28d" mediaType="application/json" postQueryString="false">
@@ -502,7 +502,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="4bfa0684-2217-48a5-9a35-daeb3765d187">
+  <con:testStep type="groovy" name="Report" id="4bfa0684-2217-48a5-9a35-daeb3765d187" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -648,11 +648,11 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value/>
+      <con:value>66791</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value/>
+      <con:value>6350</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -344,7 +344,7 @@ def LocationName = "\"" + "Location_" + date + RandomNumber +  "\""
 testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="JDBC" id="f5e6cf49-8fe7-4814-91bf-a11372b64b8a">
+  <con:testStep type="datasource" name="JDBC" id="f5e6cf49-8fe7-4814-91bf-a11372b64b8a" disabled="true">
     <con:settings>
       <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
     </con:settings>
@@ -374,7 +374,7 @@ Where upper(st.STATE_NAME) = upper(${#TestCase#State_Name})</query>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Test_Data_Setup" id="326390d8-099e-4f84-9997-df109a89ef21">
+  <con:testStep type="groovy" name="Test_Data_Setup" id="326390d8-099e-4f84-9997-df109a89ef21" disabled="true">
     <con:settings/>
     <con:config>
       <script>def data_Combination = context.expand( '${DataSource#Data_Combination}' )
@@ -403,7 +403,7 @@ def tC_Number = context.expand( '${DataSource#TC_Number}' )
 log.info tC_Number</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Create Location_Positive" id="5829050c-6546-4689-bdf8-910e3facfc31">
+  <con:testStep type="restrequest" name="Create Location_Positive" id="5829050c-6546-4689-bdf8-910e3facfc31" disabled="true">
     <con:settings/>
     <con:config service="Create Location" resourcePath="/client_auth/location" methodName="Create Location" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Create Location_Positive" id="6160fb0a-7b6c-4952-b026-d37159474bbd" mediaType="application/json" postQueryString="false">
@@ -625,7 +625,7 @@ log.info tC_Number</script>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="707caba8-eee1-4322-b637-c57d9804ff05">
+  <con:testStep type="groovy" name="Report" id="707caba8-eee1-4322-b637-c57d9804ff05" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -761,7 +761,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="0c4a7196-8958-4ebe-8575-85ba3d142f3a">
+  <con:testStep type="groovy" name="Data_Sink_Flow_Control" id="0c4a7196-8958-4ebe-8575-85ba3d142f3a" disabled="true">
     <con:settings/>
     <con:config>
       <script>/*Get Test Case Name and Status*/
@@ -791,7 +791,7 @@ if(Status_Code.contains("200")){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="74e9c269-ec8f-4bc5-97bb-ccbb87971ecd">
+  <con:testStep type="groovy" name="Run_Time_Data_Transfer" id="74e9c269-ec8f-4bc5-97bb-ccbb87971ecd" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -857,18 +857,18 @@ out.close()</script>
       <con:name>Location_ID_Transfer</con:name>
       <con:value>HTTP/1.1 200 undefined
 Server: nginx/1.4.6 (Ubuntu)
-Date: Mon, 08 Oct 2018 11:27:56 GMT
+Date: Tue, 09 Oct 2018 04:19:02 GMT
 Content-Type: application/json
 Connection: keep-alive
 X-Backside-Transport: OK OK
-X-Global-Transaction-ID: 7abfb5425bbb3f3b02148c8b
+X-Global-Transaction-ID: 5da202e25bbc2c3504440599
 User-Agent: IBM-APIConnect/201
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: X-PINGOTHER,Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
 Access-Control-Expose-Headers: APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID,xsrf-token
-X-Application-Context: wcloud-location-service (QA):test
+X-Application-Context: wcloud-location-service (Dev):prod
 X-Content-Type-Options: nosniff
 X-XSS-Protection: 1; mode=block
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
@@ -877,15 +877,15 @@ Expires: 0
 X-Frame-Options: DENY
 Strict-Transport-Security: max-age=15768000
 
-{"LOCATION_ID":7264,"CITY":"New York","ACCOUNT_ID":18674,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":1,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Mon_Oct_08_16_57_53_IST_20181160600","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":"","UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
+{"LOCATION_ID":58397,"CITY":"New York","ACCOUNT_ID":66791,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":1,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Tue_Oct_09_09_48_59_IST_20181961508","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":"","UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value/>
+      <con:value>66791</con:value>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
-      <con:value>'New York'</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>COUNTRY_CODE</con:name>
@@ -893,11 +893,11 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Mon_Oct_08_17_23_28_IST_2018</con:value>
+      <con:value>Regression_Location_Tue_Oct_09_09_48_59_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Mon_Oct_08_17_23_28_IST_20183708189"</con:value>
+      <con:value>"Location_Tue_Oct_09_09_49_03_IST_20186399546"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
