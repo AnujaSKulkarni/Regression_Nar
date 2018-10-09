@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Prod" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
@@ -669,7 +669,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzg5OTM3NjIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwYzc1YjI2NS0xYzljLTQ2NGUtODMwZi04OTQ2ODFlNjYzOTciLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.6AhHO6V2HmkN491qfAFDoVYTnr7LNBz1NdtogsasinI</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkxMDMxMzksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJjNjkwZmFiYi0wMTg4LTQwZGUtODMzOS04N2U0ZTNkYjJlNGUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.a05eSPYYbR9q_3E5DVGlRithBYdE1_4X7MVykpEnA6I</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -681,19 +681,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-08/Run_Number_3/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_24/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-08/Run_Number_3/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_24/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjcyLCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzA5XzQ5XzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM4OTkzOTk3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJlZDBlZWUyYy0wYjQzLTQ0NzMtYjJmZi03ZmFjMTg0ZmM5ZDkiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.mfiudurrr7iZeM7yZxbBY7GA4UDklXv5X6oWJYowJAI</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njg2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE2XzA5XzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MTAzMTUwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJiZGI4MjUxMy0wN2FkLTRjZjYtYTg3Zi04NjA0ZGQwOTI2MWUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.vQ0Oi2IbajyQy_O4oUlCDLT9mxdhqrffKo1JBApIaZI</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4NjcyLCJ1c2VyX25hbWUiOiJNT05fT0NUXzA4XzA5XzQ5XzQ0X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiZWQwZWVlMmMtMGI0My00NDczLWIyZmYtN2ZhYzE4NGZjOWQ5IiwiZXhwIjoxNTQwMjY4Mzk3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJmNGRjMTJjMS0zMDMyLTQxYjAtYTdlYy1hNmMzMmRjNGJlNDYiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.SAKKzaGiygLo4tsi6aCzI-rMyZebAPT2BBlBVlIQMQg</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjE4Njg2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE2XzA5XzAwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiYmRiODI1MTMtMDdhZC00Y2Y2LWE4N2YtODYwNGRkMDkyNjFlIiwiZXhwIjoxNTQwMzc3NTUwLCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI0ZGRjZTNkOC03ODJjLTQyMmUtOWIzYi05YmE0MzQ3ZDhkNmEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.5zIP8mg5eeshDd61D3hzL68o2vtNEroPdycj2NAG7Nc</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -2676,7 +2676,7 @@
       <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Reclaim Appliance copy">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">https://api.whrcloud.com/api/v1/appliances/reclaim</con:endpoint>
     </con:service>
     <con:service type="REST" name="GetRandomOperationInstruction">
       <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -2685,10 +2685,10 @@
       <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
     </con:service>
     <con:service type="REST" name="Get device shadow for id">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Reclaim_Unclaim">
-      <con:endpoint authProfile="No Authorization" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -2700,11 +2700,11 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkwODAyNjAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJiNGU1ZGVhNC03MmFkLTQxYTUtOWIxOS1iMDgyNTk4MTE3MmYiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.v7NmKhwYZGbBTnf_Gc0141JuKD93s-Z-PccOb0jl_1s</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkxMDAxMTEsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxZmVlNTA5Mi1kNmFmLTQxMzItODgwNC00MDA0NDhkOGQxNTEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.TZy6swpL0wUYs1KC_RMDYXMqrwp5s92uPXA_KlvlopU</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
-      <con:value>QA</con:value>
+      <con:value>PROD</con:value>
     </con:property>
     <con:property>
       <con:name>Test_Data_Path</con:name>
@@ -2712,23 +2712,23 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_2/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-09/Run_Number_23/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-09/Run_Number_2/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-09/Run_Number_23/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2NzkxLCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzA5XzQ3XzQwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MDgwMjY3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI4YzE1YzM4ZC1hYmZkLTRhMjQtYjJhNy01MGYzNGU4MWNhY2MiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.y2qajczSNE4LRclggA1K0nt1CQwcwXhs_RxsKHp4rL8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2ODE2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE1XzIxXzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MTAwNjE1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJjMWVjYzQwYi1kMjUzLTQyM2YtOWU2Zi02MjhjZTAxMTlhODgiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.rcUHWLtmc6ClS3a2QX9SmHA-iWh5GjEK5WtfXCS9oZ0</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2NzkxLCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzA5XzQ3XzQwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiOGMxNWMzOGQtYWJmZC00YTI0LWIyYTctNTBmMzRlODFjYWNjIiwiZXhwIjoxNTQwMzU0NjY3LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiIyNWM0MTk0NC0wNDJiLTRlNWQtYmU3ZS1jYTk4OWRmYjBlYzAiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.w8AUVszRqZvzuZ041WQtubb2EfC0HLKvgLMviCKOlSI</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2ODE2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE1XzIxXzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiYzFlY2M0MGItZDI1My00MjNmLTllNmYtNjI4Y2UwMTE5YTg4IiwiZXhwIjoxNTQwMzc1MDE1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI5YTA2N2IyYS02NjVkLTQxYmYtYjBmOC0wMzIzZjUwMmJiMTEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.__GUDo2CIJFo5EAg63ByR3phCqxlC-EoD95G9_IZJP4</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
-      <con:value>64</con:value>
+      <con:value>14</con:value>
     </con:property>
     <con:property>
       <con:name>Client_ID</con:name>
@@ -2748,7 +2748,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance_Number</con:name>
-      <con:value>\"488\"</con:value>
+      <con:value>\"12693\"</con:value>
     </con:property>
     <con:property>
       <con:name>Device_Model_ID</con:name>
@@ -2768,7 +2768,7 @@
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value>723</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>UPC_Sheet</con:name>
@@ -2780,7 +2780,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance_id</con:name>
-      <con:value/>
+      <con:value>12693</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance Name</con:name>
@@ -2796,11 +2796,11 @@
     </con:property>
     <con:property>
       <con:name>appliance_Id</con:name>
-      <con:value/>
+      <con:value>12693</con:value>
     </con:property>
     <con:property>
       <con:name>Alert</con:name>
-      <con:value/>
+      <con:value>69</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance_scan2</con:name>

@@ -894,6 +894,7 @@ out.close()</script>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
       <targetStep>Flow Control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties>
@@ -936,11 +937,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Country_Name</con:name>
-      <con:value>IT</con:value>
+      <con:value>US</con:value>
     </con:property>
     <con:property>
       <con:name>Region</con:name>
-      <con:value>EMEA</con:value>
+      <con:value>NAR</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

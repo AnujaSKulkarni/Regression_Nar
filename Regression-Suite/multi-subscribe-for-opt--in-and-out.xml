@@ -277,7 +277,7 @@ if (API_Name != TestCaseName){
           <driver>com.ibm.db2.jcc.DB2Driver</driver>
           <connstr>jdbc:db2://dashdb-txn-small-yp-dal09-117.services.dal.bluemix.net:50000/BLUDB:user=mohitbh;password=PASS_VALUE;</connstr>
           <pass>Syntel@mb5027676</pass>
-          <Connection>QA( Stage )</Connection>
+          <Connection>QA( Prod )</Connection>
           <query>Select A.appliance_id as A_appliance_id, B.alert_id as B_alert_id
 From (Select app.appliance_id
     From BLUADMIN.appliance app

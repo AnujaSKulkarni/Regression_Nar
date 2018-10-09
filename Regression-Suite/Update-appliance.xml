@@ -272,7 +272,7 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request>{
   "applianceName":"microwave",
-"applianceId":${#Project#Appliance_id}
+"applianceId":12693
   
 }</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/updateAppliances</con:originalUri>

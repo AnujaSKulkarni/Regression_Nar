@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="233d5e49-df11-49b2-8e5c-c99e972dcca8" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="History-Fault Code" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="233d5e49-df11-49b2-8e5c-c99e972dcca8" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="History-Fault Code" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="233d5e49-df11-49b2-8e5c-c99e972dcca8fileName">History-Fault-Code</con:setting>
   </con:settings>
@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077">
+  <con:testStep type="restrequest" name="History-Fault Code" id="8b29a909-9814-4757-8a02-f6508e970077" disabled="true">
     <con:settings/>
     <con:config service="History-Fault Code" resourcePath="/history/faultCode" methodName="History-Fault Code" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="History-Fault Code" id="0bd62b80-7381-4970-ac83-ddb4cc02e038" mediaType="application/json" postQueryString="false">
@@ -306,7 +306,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="160a2050-733d-4789-94cd-4b2da3b4e0d0">
+  <con:testStep type="groovy" name="Report" id="160a2050-733d-4789-94cd-4b2da3b4e0d0" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
