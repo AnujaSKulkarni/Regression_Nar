@@ -2692,11 +2692,11 @@
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
-      <con:value>https://</con:value>
+      <con:value>https://api.whrcloud.com/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
-      <con:value>https://api-test.whrcloud.com/</con:value>
+      <con:value>https://api.whrcloud.com/</con:value>
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
