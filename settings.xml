@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Prod" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
@@ -2700,7 +2700,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzkxMDAxMTEsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxZmVlNTA5Mi1kNmFmLTQxMzItODgwNC00MDA0NDhkOGQxNTEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.TZy6swpL0wUYs1KC_RMDYXMqrwp5s92uPXA_KlvlopU</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzk2MjI3NjQsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxZTI3MGZlNy01ZjQyLTRhMTYtYTk2OS03ZDY1NWRhNjE0YzciLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.uyzrmV3gGit99Qq9FSL70E6fTgXVm76H0_jpz5GtGnM</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -2712,19 +2712,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-09/Run_Number_23/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-15/Run_Number_2/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-09/Run_Number_23/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/PROD/2018-10-15/Run_Number_2/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2ODE2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE1XzIxXzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5MTAwNjE1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJjMWVjYzQwYi1kMjUzLTQyM2YtOWU2Zi02MjhjZTAxMTlhODgiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.rcUHWLtmc6ClS3a2QX9SmHA-iWh5GjEK5WtfXCS9oZ0</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY4MTU4LCJ1c2VyX25hbWUiOiJNT05fT0NUXzE1XzE2XzI5XzMwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTM5NjIyNzc1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJiMWQxYzRhMy1jZjFkLTQwMzQtOGIyNi0wMTZkNDdlZGE0MDEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.87fft4VHZ8lSjQOY2Q-KTRaiscc8Tr1aSuxSJNpmeB4</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY2ODE2LCJ1c2VyX25hbWUiOiJUVUVfT0NUXzA5XzE1XzIxXzU5X0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiYzFlY2M0MGItZDI1My00MjNmLTllNmYtNjI4Y2UwMTE5YTg4IiwiZXhwIjoxNTQwMzc1MDE1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiI5YTA2N2IyYS02NjVkLTQxYmYtYjBmOC0wMzIzZjUwMmJiMTEiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.__GUDo2CIJFo5EAg63ByR3phCqxlC-EoD95G9_IZJP4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjY4MTU4LCJ1c2VyX25hbWUiOiJNT05fT0NUXzE1XzE2XzI5XzMwX0lTVF8yMDE4QE1BSUxJTkFUT1IuQ09NIiwic2NvcGUiOlsidHJ1c3QiLCJyZWFkIiwid3JpdGUiXSwiYXRpIjoiYjFkMWM0YTMtY2YxZC00MDM0LThiMjYtMDE2ZDQ3ZWRhNDAxIiwiZXhwIjoxNTQwODk3MTc1LCJhdXRob3JpdGllcyI6WyJXQ0xPVURfVVNFUiJdLCJqdGkiOiJiYmNlMzRkMC0xZDliLTRlNWEtYjRhNi1mYzMzOWZkM2Q0ZDUiLCJjbGllbnRfaWQiOiJzeW50ZWwiLCJTQUlEIjpbXX0.pxNzAUXMHW-Ws3HOm2B97XONFgtPKxxly8StK1Eh9VY</con:value>
     </con:property>
     <con:property>
       <con:name>Role_ID</con:name>
@@ -2804,7 +2804,7 @@
     </con:property>
     <con:property>
       <con:name>Appliance_scan2</con:name>
-      <con:value/>
+      <con:value>https://applianceserviceqa-v2.kube-cluster-residen.us-south.containers.mybluemix.net/api/v1</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
