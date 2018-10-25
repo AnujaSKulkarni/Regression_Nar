@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="Stage" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.3.0 2018-03-06T16:28:42Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7a2da3c2-43b5-4954-9455-e602f212f4d8" created="2.3.0" activeEnvironment="QA" name="NAR" resourceRoot="${projectDir}" compositeProjectFormat="1.3" encryptionMode="Not encrypted" updated="2.5.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7a2da3c2-43b5-4954-9455-e602f212f4d8fileName">EMEA-Regression</con:setting>
     <con:setting id="WsdlSettings@cache-wsdls">true</con:setting>
@@ -669,7 +669,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mzk2MTk2MzUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJkYjMxMmI5Zi0xNzAzLTQwNTMtOGNjMy1jOGFiOTAzMTA5MjgiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.HqMxqpuMKHTjp_iJGDcDWKjeTxVnK0pDgsSubRP_O1s</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMTkyODIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJiNmFkNDY3Mi1kNmRiLTRmMzMtYmQyNy0yM2M4NzJmMzY3ZDQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.jDaSbqh0GliAfoRoSQmVGvd7u8IbHFUyOnpTlFTtxaQ</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -681,11 +681,11 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-15/Run_Number_4/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-23/Run_Number_2/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-15/Run_Number_4/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/QA/2018-10-23/Run_Number_2/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
@@ -1346,7 +1346,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAyMzI4MzksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxMzAxZmUzMy1lOTA1LTQ0YmYtOWVjZS0yOTQzNDE0MmYwYzAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.Slv2FiLV5NycoQ5phzOJhEWXOI6rrvLKgKGh-VNz7io</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMTU3NjMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI1ZTYwYjc3MC01ZGQwLTRiOGUtYTUzMC1hMmE1OTc0N2ZmOGIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.DbZGeAQMkAnkllEPbQe5f8tGOaT6ggzslUvGmAdqVs8</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1358,11 +1358,11 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-22/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-23/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-22/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/NAR/Stage/2018-10-23/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
