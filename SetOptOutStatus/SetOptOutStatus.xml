@@ -25,6 +25,12 @@
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:true="https://api-test.whrcloud.com/api/v1/OptOutStatus/true">true:Fault</con:element>
+    </con:representation>
     <con:request name="SetOptOutStatus" id="7721a63c-98fb-4da9-a33d-94263df48a71" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

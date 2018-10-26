@@ -31,7 +31,7 @@
     </con:parameters>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404 405 400</con:status>
+      <con:status>404 405 400 500</con:status>
       <con:params/>
       <con:element xmlns:test="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/accounts/forgotPassword/test@test.com/">test:Fault</con:element>
     </con:representation>

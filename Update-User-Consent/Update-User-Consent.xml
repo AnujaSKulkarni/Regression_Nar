@@ -72,7 +72,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404 401</con:status>
+      <con:status>404 401 400</con:status>
       <con:params/>
       <con:element xmlns:ns="http://amazonreplenishmentservicestg-v2.mybluemix.net/api/v1/userConsent/246">ns:Fault</con:element>
     </con:representation>
