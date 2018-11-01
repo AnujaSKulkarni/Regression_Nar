@@ -407,7 +407,6 @@ log.info tC_Number</script>
           <con:entry key="Authorization" value="Bearer ${#Project#access_token}"/>
           <con:entry key="wp-client-country" value="${#TestCase#Country_Name}"/>
           <con:entry key="wp-client-brand" value="${#TestCase#Brand_Name}"/>
-          <con:entry key="wp-client-region" value="${#TestCase#Region}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -731,11 +730,11 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>13898</con:value>
+      <con:value>13901</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"WED_OCT_31_16_26_36_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"THU_NOV_01_13_05_06_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Brand_Name</con:name>
