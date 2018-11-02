@@ -16,23 +16,23 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"THU_NOV_01_13_05_06_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"FRI_NOV_02_09_40_11_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>THU_NOV_01_13_05_06_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>FRI_NOV_02_09_40_11_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">13901</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">13903</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value>8398</con:value>
+      <con:value>827</con:value>
     </con:property>
     <con:property>
       <con:name>Account_Email</con:name>
-      <con:value>THU_NOV_01_13_05_06_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>FRI_NOV_02_09_40_11_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
@@ -40,11 +40,11 @@
     </con:property>
     <con:property>
       <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_WED_OCT_31_16_27_09_IST_2018"</con:value>
+      <con:value>"SANITY_GROUP_FRI_NOV_02_09_40_39_IST_2018"</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_WED_OCT_31_16_27_09_IST_2018</con:value>
+      <con:value>SANITY_GROUP_FRI_NOV_02_09_40_39_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Template_ID</con:name>
@@ -84,11 +84,11 @@
     </con:property>
     <con:property>
       <con:name>Group_ID</con:name>
-      <con:value>16031</con:value>
+      <con:value>16036</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Number</con:name>
-      <con:value>8846</con:value>
+      <con:value>8850</con:value>
     </con:property>
     <con:property>
       <con:name>Alternate_Email</con:name>
